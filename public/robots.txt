@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nicodaval.github.io/cv_nicolas_daval/sitemap.xml

@@ -1,7 +1,7 @@
 diplomas:
   - title_fr: Diplôme d'Ingénieur
     title_en: Engineering Degree (Master's equivalent)
-    institution: CNAM
+    institution: UTBM
     year: 2006
 
   - title_fr: Maîtrise Informatique
@@ -11,17 +11,17 @@ diplomas:
 
   - title_fr: CASIE — Concepteur et Administrateur des Systèmes d'Information d'Entreprise
     title_en: CASIE — Enterprise Information Systems Designer & Administrator
-    institution: null
+    institution: ICEP Dole
     year: 2002
 
   - title_fr: DUT Informatique
     title_en: DUT in Computer Science (2-year technical degree)
-    institution: null
+    institution: IUT Dijon
     year: 2000
 
   - title_fr: Baccalauréat Scientifique (Bac S)
     title_en: Scientific Baccalaureate
-    institution: null
+    institution: Lycée d'Avallon(89)
     year: 1998
 
 training:

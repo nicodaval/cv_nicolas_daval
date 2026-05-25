@@ -1,3 +1,10 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
 # MkDocs build output
 site/
 
@@ -18,3 +25,15 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.production.local
+
+# Debug
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

@@ -1,4 +1,32 @@
 projects:
+  - title_fr: Migration Hadoop vers Dataplateforme New Gen
+    title_en: Hadoop to Next-Gen Data Platform Migration
+    company: Stellantis Financial Services
+    period: 2021 - présent
+    description_fr: >
+      Pilotage de la migration de la plateforme Hadoop legacy vers la dataplateforme
+      nouvelle génération (Snowflake). Analyse de l'existant, définition de la stratégie
+      de migration, spécifications techniques et choix de modélisation avec le partenaire.
+    description_en: >
+      Led the migration from the legacy Hadoop platform to the next-generation data platform
+      (Snowflake). Analyzed existing system, defined migration strategy, produced technical
+      specifications and modeling choices in collaboration with the partner.
+    technologies:
+      - Hadoop
+      - Spark
+      - Snowflake
+      - dbt
+      - Python
+      - AWS
+    outcomes_fr:
+      - Stratégie de migration définie et validée
+      - Spécifications techniques livrées
+      - Choix de modélisation arrêtés avec le partenaire
+    outcomes_en:
+      - Migration strategy defined and validated
+      - Technical specifications delivered
+      - Modeling choices finalized with partner
+
   - title_fr: Plateforme Data Snowflake sur AWS
     title_en: Snowflake Data Platform on AWS
     company: Stellantis Financial Services
