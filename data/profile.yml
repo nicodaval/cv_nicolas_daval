@@ -33,15 +33,28 @@ salary:
   target: "85K€"
 
 summary_fr: >
-  Architecte Data et Tech Lead avec plus de 22 ans d'expérience chez Stellantis Financial Services.
-  Spécialisé dans la conception de plateformes data cloud (Snowflake, AWS, dbt, Airflow),
-  l'architecture logicielle (Java/Spring, microservices, event-driven) et le pilotage d'équipes
-  internationales (France, Argentine, Chine, Inde). Reconnu pour ma capacité à vulgariser les
-  sujets techniques, gérer les situations de crise et mener des projets réglementaires sensibles.
+  Data Architect & Tech Lead avec 22+ ans d'expérience banque (Stellantis Financial Services),
+  spécialisé dans la conception et l'industrialisation de plateformes data cloud à l'échelle
+  d'un groupe multi-pays. Co-pilote le programme de transformation Snowflake / AWS / dbt
+  servant 8 pays européens, avec des standards (RBAC, gouvernance, privacy, data contracts)
+  adoptés comme référence SFS Banque. Conçoit des frameworks d'ingestion et de transformation
+  qui réduisent le time-to-market des flux data (objectif x4) et accélère le delivery par
+  l'usage intensif de GenAI et Kiro.
+  Architecte software de longue date — introduction des patterns microservices et event-driven
+  chez SFS, conception d'un framework d'industrialisation Ops encore en production.
+  Reconnu pour sa capacité à porter des arbitrages d'architecture, gérer les crises
+  (réglementaire UK, performance plateforme) et faire converger métiers, IT et partenaires
+  sur 8 pays.
 
 summary_en: >
-  Data Architect and Tech Lead with 22+ years of experience at Stellantis Financial Services.
-  Specialized in cloud data platform design (Snowflake, AWS, dbt, Airflow), software architecture
-  (Java/Spring, microservices, event-driven) and international team leadership (France, Argentina,
-  China, India). Known for ability to simplify complex technical topics, manage crisis situations,
-  and deliver sensitive regulatory projects.
+  Data Architect & Tech Lead with 22+ years of banking experience (Stellantis Financial
+  Services), specialized in designing and industrializing enterprise-grade cloud data
+  platforms at multi-country scale. Co-leads the Snowflake / AWS / dbt transformation
+  program serving 8 European countries, with standards (RBAC, governance, privacy, data
+  contracts) adopted as the SFS Banking reference. Designs ingestion and transformation
+  frameworks that cut data flow time-to-market (x4 target) and accelerates delivery
+  through intensive use of GenAI and Kiro.
+  Long-standing software architect — introduced microservices and event-driven patterns
+  at SFS, designed an Ops industrialization framework still in production today.
+  Known for owning architectural trade-offs, managing crises (UK regulatory, platform
+  performance) and aligning business, IT and partners across 8 countries.
