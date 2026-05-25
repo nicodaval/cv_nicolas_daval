@@ -1,0 +1,338 @@
+:root {
+  /* Primary palette */
+  --cv-primary: #1a237e;          /* Deep indigo - headings, timeline markers */
+  --cv-primary-light: #3949ab;    /* Lighter indigo - hover states */
+  --cv-accent: #00897b;           /* Teal - accent elements, skill bars */
+  --cv-accent-light: #4db6ac;     /* Light teal - secondary accents */
+
+  /* Neutrals */
+  --cv-bg: #fafafa;               /* Page background */
+  --cv-surface: #ffffff;          /* Card backgrounds */
+  --cv-text: #212121;             /* Body text */
+  --cv-text-secondary: #616161;   /* Secondary text */
+  --cv-border: #e0e0e0;           /* Borders and dividers */
+
+  /* Shadows */
+  --cv-shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+  --cv-shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+
+  /* Spacing */
+  --cv-spacing-xs: 0.25rem;
+  --cv-spacing-sm: 0.5rem;
+  --cv-spacing-md: 1rem;
+  --cv-spacing-lg: 1.5rem;
+  --cv-spacing-xl: 2rem;
+
+  /* Border radius */
+  --cv-radius: 8px;
+  --cv-radius-sm: 4px;
+
+  /* Timeline */
+  --cv-timeline-line: 2px;
+  --cv-timeline-marker: 14px;
+}
+
+/* ==========================================================================
+   Timeline Component
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  padding-left: var(--cv-spacing-xl);
+  margin: var(--cv-spacing-lg) 0;
+}
+
+/* Vertical connecting line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--cv-timeline-marker) / 2 - var(--cv-timeline-line) / 2);
+  top: 0;
+  bottom: 0;
+  width: var(--cv-timeline-line);
+  background: var(--cv-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--cv-spacing-xl);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Circular marker on the line */
+.timeline-marker {
+  position: absolute;
+  left: calc(-1 * var(--cv-spacing-xl));
+  top: var(--cv-spacing-xs);
+  width: var(--cv-timeline-marker);
+  height: var(--cv-timeline-marker);
+  border-radius: 50%;
+  background: var(--cv-primary);
+  border: 2px solid #ffffff;
+  box-shadow: var(--cv-shadow-sm);
+}
+
+.timeline-date {
+  font-size: 0.875rem;
+  color: var(--cv-text-secondary);
+  margin-bottom: var(--cv-spacing-xs);
+  font-weight: 500;
+}
+
+.timeline-content {
+  padding-left: var(--cv-spacing-sm);
+}
+
+.timeline-content h3 {
+  margin: 0 0 var(--cv-spacing-xs) 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cv-text);
+}
+
+.timeline-company {
+  color: var(--cv-primary-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: var(--cv-spacing-sm);
+}
+
+/* ==========================================================================
+   Skill Bar Component
+   ========================================================================== */
+
+.skills-section {
+  margin-bottom: var(--cv-spacing-xl);
+}
+
+.skills-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cv-primary);
+  margin-bottom: var(--cv-spacing-md);
+}
+
+.skill-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--cv-spacing-sm);
+  margin-bottom: var(--cv-spacing-sm);
+}
+
+.skill-label {
+  flex: 0 0 120px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cv-text);
+}
+
+.skill-track {
+  flex: 1;
+  height: 10px;
+  background: var(--cv-border);
+  border-radius: var(--cv-radius-sm);
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--cv-accent);
+  border-radius: var(--cv-radius-sm);
+  transition: width 0.6s ease;
+}
+
+.skill-percent {
+  flex: 0 0 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cv-text-secondary);
+  text-align: right;
+}
+
+/* ==========================================================================
+   Card Component
+   ========================================================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--cv-spacing-lg);
+  margin: var(--cv-spacing-lg) 0;
+}
+
+.card {
+  background: var(--cv-surface);
+  border-radius: var(--cv-radius);
+  padding: var(--cv-spacing-lg);
+  box-shadow: var(--cv-shadow-sm);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--cv-shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: var(--cv-spacing-sm);
+}
+
+.card h3 {
+  margin: 0 0 var(--cv-spacing-xs) 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cv-text);
+}
+
+.card-subtitle {
+  color: var(--cv-text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 var(--cv-spacing-xs) 0;
+}
+
+.card-date {
+  color: var(--cv-text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   PDF Download Button
+   ========================================================================== */
+
+.pdf-download-btn {
+  display: inline-block;
+  background-color: var(--cv-accent);
+  color: #ffffff;
+  padding: var(--cv-spacing-sm) var(--cv-spacing-lg);
+  border-radius: var(--cv-radius);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--cv-shadow-sm);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pdf-download-btn:hover {
+  background-color: var(--cv-accent-light);
+  box-shadow: var(--cv-shadow-md);
+  transform: translateY(-1px);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet (768px - 1024px)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Cards: 2-column layout */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Timeline: reduced spacing */
+  .timeline {
+    padding-left: var(--cv-spacing-lg);
+  }
+
+  .timeline-item {
+    padding-bottom: var(--cv-spacing-lg);
+  }
+
+  .timeline-marker {
+    left: calc(-1 * var(--cv-spacing-lg));
+  }
+
+  /* Skill bars: slightly smaller label width */
+  .skill-label {
+    flex: 0 0 100px;
+    font-size: 0.85rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (<768px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  /* Typography: adjust font sizes for narrow viewports */
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  /* Timeline: stack vertically without horizontal overflow */
+  .timeline {
+    padding-left: var(--cv-spacing-lg);
+    overflow-x: hidden;
+  }
+
+  .timeline::before {
+    left: calc(var(--cv-timeline-marker) / 2 - var(--cv-timeline-line) / 2);
+  }
+
+  .timeline-item {
+    padding-bottom: var(--cv-spacing-lg);
+  }
+
+  .timeline-marker {
+    left: calc(-1 * var(--cv-spacing-lg));
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-content {
+    padding-left: 0;
+  }
+
+  /* Cards: single-column layout */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--cv-spacing-md);
+  }
+
+  /* Skill bars: adjust label width for readability */
+  .skill-bar {
+    flex-wrap: wrap;
+    gap: var(--cv-spacing-xs);
+  }
+
+  .skill-label {
+    flex: 0 0 90px;
+    font-size: 0.85rem;
+  }
+
+  .skill-track {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .skill-percent {
+    flex: 0 0 36px;
+    font-size: 0.8rem;
+  }
+
+  /* PDF download button: full width */
+  .pdf-download-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
