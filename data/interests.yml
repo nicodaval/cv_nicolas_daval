@@ -1,35 +1,32 @@
 soft_skills:
+- name_fr: Expertise banque & data
+  name_en: Banking & data expertise
+  detail_fr: 22+ ans en banque (Stellantis FS) — framework BIAN, cadre réglementaire, audits Banque Centrale et ISO
+  detail_en: 22+ years in banking (Stellantis FS) — BIAN framework, regulatory environment, Central Bank and ISO audits
+  display: true
 - name_fr: Encadrement d'équipes internationales
   name_en: International team management
-  detail_fr: Équipes réparties sur plusieurs sites (France, Argentine, Chine, Inde)
-  detail_en: Teams distributed across multiple sites (France, Argentina, China, India)
+  detail_fr: Équipes réparties sur plusieurs sites (France, Argentine, Chine, Inde) — inshore, nearshore, offshore
+  detail_en: Teams distributed across multiple sites (France, Argentina, China, India) — inshore, nearshore, offshore
   display: true
-- name_fr: Vulgarisation technique
-  name_en: Technical communication
-  detail_fr: Capacité à vulgariser les sujets complexes et faire adhérer les parties
-    prenantes
-  detail_en: Ability to simplify complex topics and get stakeholder buy-in
+- name_fr: Vulgarisation & communication
+  name_en: Communication & stakeholder buy-in
+  detail_fr: Capacité à vulgariser les sujets complexes, challenger les idées et faire adhérer les parties prenantes
+  detail_en: Ability to simplify complex topics, challenge ideas and drive stakeholder buy-in
   display: true
 - name_fr: Gestion de crise
   name_en: Crisis management
-  detail_fr: Très bon dans la gestion de sujets sensibles et réglementaires urgents
-  detail_en: Strong in managing sensitive and urgent regulatory topics
+  detail_fr: Pilotage de sujets sensibles et réglementaires urgents en mode taskforce / war room
+  detail_en: Driving sensitive and urgent regulatory topics in taskforce / war room mode
   display: true
 - name_fr: Évangélisation data
   name_en: Data evangelism
   detail_fr: Promotion de la culture data et des bonnes pratiques au sein de l'organisation
   detail_en: Promoting data culture and best practices within the organization
   display: true
-- name_fr: Connaissance du cadre bancaire
-  name_en: Banking framework expertise
-  detail_fr: Framework BIAN et cadre réglementaire bancaire
-  detail_en: BIAN framework and banking regulatory environment
-  display: true
 interests:
 - name_fr: Badminton
   name_en: Badminton
-  detail_fr: Membre du CA du Comité Départemental de Badminton du Doubs. Encadrant
-    jeunes au club du Volant Bisontin.
-  detail_en: Board member of the Doubs Departmental Badminton Committee. Youth coach
-    at Volant Bisontin club.
+  detail_fr: Membre du CA du Comité Départemental de Badminton du Doubs. Encadrant jeunes au club du Volant Bisontin.
+  detail_en: Board member of the Doubs Departmental Badminton Committee. Youth coach at Volant Bisontin club.
   display: true
