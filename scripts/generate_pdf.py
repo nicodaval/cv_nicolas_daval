@@ -123,7 +123,31 @@ def draw_sidebar(c, profile, skills, education, interests_data, lang):
     c.setFillColor(SIDEBAR_ACCENT)
     c.setFont('Helvetica', 9)
     c.drawString(x, y, profile['title'])
-    y -= 20
+    y -= 12
+
+    # Tagline (slogan)
+    tagline = profile.get(f'tagline_{lang}', '')
+    if tagline:
+        c.setFillColor(SIDEBAR_TEXT)
+        c.setFont('Helvetica-Oblique', 6.5)
+        sidebar_text_w = SIDEBAR_W - SIDEBAR_PADDING * 2
+        words = tagline.split()
+        line = ''
+        for word in words:
+            test = f"{line} {word}".strip()
+            if pdfmetrics.stringWidth(test, 'Helvetica-Oblique', 6.5) < sidebar_text_w:
+                line = test
+            else:
+                if line:
+                    c.drawString(x, y, line)
+                    y -= 8
+                line = word
+        if line:
+            c.drawString(x, y, line)
+            y -= 8
+        y -= 4
+    else:
+        y -= 8
 
     # Blue accent line
     c.setStrokeColor(SIDEBAR_ACCENT)
@@ -596,7 +620,15 @@ def build_ats_pdf(lang):
     c.setFont('Helvetica', 11)
     c.setFillColor(MAIN_ACCENT)
     c.drawString(margin_x, y, profile['title'])
-    y -= 14
+    y -= 12
+
+    # Tagline
+    tagline = profile.get(f'tagline_{lang}', '')
+    if tagline:
+        c.setFont('Helvetica-Oblique', 8.5)
+        c.setFillColor(MAIN_SECONDARY)
+        c.drawString(margin_x, y, tagline)
+        y -= 12
 
     c.setFont('Helvetica', 8.5)
     c.setFillColor(MAIN_SECONDARY)

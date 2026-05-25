@@ -3,6 +3,8 @@ export type Lang = 'fr' | 'en';
 export interface Profile {
   name: string;
   title: string;
+  tagline_fr?: string;
+  tagline_en?: string;
   location: string;
   contact: {
     email: string;
