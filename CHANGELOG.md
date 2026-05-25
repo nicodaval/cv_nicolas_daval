@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/nicodaval/cv_nicolas_daval/compare/v1.2.0...v1.3.0) (2026-05-25)
+
+
+### Features
+
+* **profile:** add tagline 'Tech enthusiast & data platform builder' ([36c9e22](https://github.com/nicodaval/cv_nicolas_daval/commit/36c9e22fb220a6b31574ce69cef8bf1730f197e0))
+
 ## [1.2.0](https://github.com/nicodaval/cv_nicolas_daval/compare/v1.1.0...v1.2.0) (2026-05-25)
 
 
