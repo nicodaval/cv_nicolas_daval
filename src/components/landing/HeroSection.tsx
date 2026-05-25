@@ -9,13 +9,19 @@ interface HeroSectionProps {
 
 export default function HeroSection({ profile, lang }: HeroSectionProps) {
   const summary = localize(profile, 'summary', lang);
+  const tagline = profile.tagline_fr ? localize(profile, 'tagline', lang) : null;
 
   return (
     <section className="py-16 sm:py-24 text-center">
       <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
         {profile.name}
       </h1>
-      <p className="text-xl text-primary font-medium mb-6">{profile.title}</p>
+      <p className="text-xl text-primary font-medium mb-2">{profile.title}</p>
+      {tagline && (
+        <p className="text-base italic text-secondary mb-6 max-w-2xl mx-auto">
+          {tagline}
+        </p>
+      )}
       <p className="max-w-2xl mx-auto text-gray-600 leading-relaxed mb-8">
         {summary}
       </p>

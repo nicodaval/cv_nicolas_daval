@@ -11,12 +11,18 @@ interface ProfileSectionProps {
 export default function ProfileSection({ profile, lang }: ProfileSectionProps) {
   const labels = getLabels(lang);
   const summary = localize(profile, 'summary', lang);
+  const tagline = profile.tagline_fr ? localize(profile, 'tagline', lang) : null;
 
   return (
     <div className="mb-10 p-6 rounded-card bg-white shadow-card border border-gray-100">
       {/* Name and title */}
       <h1 className="text-3xl font-bold text-gray-900 mb-1">{profile.name}</h1>
-      <p className="text-lg text-primary font-medium mb-3">{profile.title}</p>
+      <p className="text-lg text-primary font-medium mb-1">{profile.title}</p>
+      {tagline && (
+        <p className="text-sm italic text-secondary mb-3 border-l-2 border-secondary pl-3">
+          {tagline}
+        </p>
+      )}
 
       {/* Contact info */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600 mb-4">
