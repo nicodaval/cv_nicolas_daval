@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/nicodaval/cv_nicolas_daval/compare/v1.1.0...v1.2.0) (2026-05-25)
+
+
+### Features
+
+* **pdf:** repeat sidebar on multi-page and reorder soft skills by pr… ([02dbc1f](https://github.com/nicodaval/cv_nicolas_daval/commit/02dbc1f7bf7e99191193bc7df8011436cf3926fb))
+* **pdf:** repeat sidebar on multi-page and reorder soft skills by priority ([31dcf3d](https://github.com/nicodaval/cv_nicolas_daval/commit/31dcf3dc1f9367ebc17f5d59d937f57c408005b6))
+
 ## [1.1.0](https://github.com/nicodaval/cv_nicolas_daval/compare/v1.0.0...v1.1.0) (2026-05-25)
 
 
