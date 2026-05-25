@@ -329,7 +329,7 @@ def draw_main_content(c, profile, experiences, education, lang):
     for exp in experiences:
         if y < 40 * mm:
             c.showPage()
-            draw_sidebar_bg(c)
+            draw_sidebar_continuation(c, profile, lang)
             y = PAGE_H - MARGIN_TOP
 
         exp_title = localize(exp, 'title', lang)
@@ -378,7 +378,7 @@ def draw_main_content(c, profile, experiences, education, lang):
     # Education
     if y < 45 * mm:
         c.showPage()
-        draw_sidebar_bg(c)
+        draw_sidebar_continuation(c, profile, lang)
         y = PAGE_H - MARGIN_TOP
 
     y = draw_section_header(c, h['education'], x, y)
@@ -418,6 +418,75 @@ def draw_sidebar_bg(c):
     """Draw just the sidebar background (for additional pages)."""
     c.setFillColor(SIDEBAR_BG)
     c.rect(0, 0, SIDEBAR_W, PAGE_H, fill=1, stroke=0)
+
+
+def draw_sidebar_continuation(c, profile, lang):
+    """Draw a compact sidebar header for additional pages: name, title, contact, languages."""
+    # Background
+    c.setFillColor(SIDEBAR_BG)
+    c.rect(0, 0, SIDEBAR_W, PAGE_H, fill=1, stroke=0)
+
+    y = PAGE_H - MARGIN_TOP
+    x = SIDEBAR_PADDING
+
+    # Name (compact)
+    c.setFillColor(SIDEBAR_HEADING)
+    c.setFont('Helvetica-Bold', 14)
+    c.drawString(x, y, profile['name'])
+    y -= 14
+
+    # Title
+    c.setFillColor(SIDEBAR_ACCENT)
+    c.setFont('Helvetica', 8.5)
+    c.drawString(x, y, profile['title'])
+    y -= 14
+
+    # Blue accent line
+    c.setStrokeColor(SIDEBAR_ACCENT)
+    c.setLineWidth(1.5)
+    c.line(x, y, SIDEBAR_W - SIDEBAR_PADDING, y)
+    y -= 14
+
+    # Contact
+    c.setFillColor(SIDEBAR_HEADING)
+    c.setFont('Helvetica-Bold', 7.5)
+    c.drawString(x, y, 'CONTACT')
+    y -= 12
+
+    c.setFillColor(SIDEBAR_TEXT)
+    c.setFont('Helvetica', 7)
+    contact = profile.get('contact', {})
+    if profile.get('location'):
+        c.drawString(x + 2, y, profile['location'])
+        y -= 10
+    if contact.get('email'):
+        c.drawString(x + 2, y, contact['email'])
+        y -= 10
+    if contact.get('linkedin'):
+        linkedin_short = contact['linkedin'].replace('https://', '')
+        c.drawString(x + 2, y, linkedin_short)
+        y -= 10
+
+    y -= 6
+
+    # Languages (compact)
+    c.setFillColor(SIDEBAR_HEADING)
+    c.setFont('Helvetica-Bold', 7.5)
+    lang_header = 'LANGUES' if lang == 'fr' else 'LANGUAGES'
+    c.drawString(x, y, lang_header)
+    y -= 12
+
+    c.setFillColor(SIDEBAR_TEXT)
+    c.setFont('Helvetica', 7)
+    for language in profile.get('languages', []):
+        c.drawString(x + 2, y, f"{language['name']} — {language['level']}")
+        y -= 10
+
+    # Page indicator
+    c.setFillColor(SIDEBAR_ACCENT)
+    c.setFont('Helvetica-Oblique', 6.5)
+    page_label = 'suite' if lang == 'fr' else 'continued'
+    c.drawString(x, 12 * mm, f"— {page_label} —")
 
 
 def draw_section_header(c, text, x, y):
