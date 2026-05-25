@@ -7,36 +7,60 @@ experiences:
   start: 2021
   end: present
   description_fr:
-  - Définition et mise en œuvre de la plateforme Snowflake sur AWS
-  - Spécification et développement du framework EL (S3, Glue, Python, Airflow, Snowflake)
-  - Spécification du framework dbt pour la transformation des données
-  - Vulgarisation et évangélisation de la culture data chez SFS
-  - Encadrement de développeurs inshore, nearshore et offshore
-  - Réalisation de projets critiques en taskforce/war room via dbt et Snowflake
-  - Définition d'architectures pour des référentiels d'entreprise
-  - Définition de la stratégie de privacy dans Snowflake
-  - Assistance au Data Office pour la gouvernance et la privacy
-  - Maîtrise d'ouvrage internationales (DE, GB, ES, FR)
+  - Co-pilotage d'un programme de transformation plateforme data multi-pays (8 pays
+    européens) sur stack Snowflake / AWS / dbt — sponsorship DSI + Chief Data Officer,
+    équipe plateforme d'environ 20 personnes
+  - Définition de l'architecture cible avec les architectes — RBAC Snowflake, MWAA,
+    plateforme EL sur AWS Glue, modélisation 3NF puis Data Products en Gold, introduction
+    des data contracts
+  - Conception et industrialisation d'un framework EL et d'un extracteur générique
+    bank-grade (Python + dlthub) — onboarding d'un flux Bronze passé d'un dev manuel
+    à 1,5 jour, objectif x4 sur le delivery, adopté sur 100+ sources par pays
+  - Définition des standards SFS Banque (privacy, gouvernance, conventions, qualité)
+    co-construits avec l'architecte et le Data Platform Manager
+  - "Arbitrages d'architecture portés et défendus (ex : abandon imposé d'un pull DB cross-account Glue ne respectant pas les patterns d'intégration entreprise)"
+  - "Gestion de crises critiques — réglementaire UK (commissions, premier MVP en 2 semaines, itérations sous 5 jours), performance MWAA (refactoring complet en moins de 3 semaines avec expert externe et déploiement transverse)"
+  - Encadrement de développeurs inshore, nearshore et offshore — onboarding de nouveaux
+    devs en 1 semaine
+  - Vulgarisation et évangélisation de la culture data, accélération du delivery via
+    GenAI et Kiro
+  - Maîtrise d'ouvrage internationale (DE, GB, ES, FR + 4 autres pays) — interface
+    Data Office, métiers pays et équipes techniques
   description_en:
-  - Designed and implemented the Snowflake data platform on AWS
-  - Specified and developed the EL framework (S3, Glue, Python, Airflow, Snowflake)
-  - Specified the dbt framework for data transformation
-  - Evangelized and promoted data culture across SFS
-  - Managed inshore, nearshore and offshore development teams
-  - Delivered critical projects in taskforce/war room mode using dbt and Snowflake
-  - Defined enterprise reference data architectures
-  - Defined the privacy strategy in Snowflake
-  - Supported the Data Office on governance and privacy
-  - International project ownership (DE, GB, ES, FR)
+  - Co-led a multi-country data platform transformation program (8 European countries)
+    on Snowflake / AWS / dbt — CIO + Chief Data Officer sponsorship, ~20-person platform
+    team
+  - Defined target architecture with architects — Snowflake RBAC, MWAA, AWS Glue EL
+    platform, 3NF then Gold-layer Data Products, data contracts introduction
+  - Designed and industrialized an EL framework and a bank-grade generic extractor
+    (Python + dlthub) — Bronze flow onboarding from full manual build to 1.5 days,
+    x4 delivery target, adopted on 100+ sources per country
+  - Defined SFS Banking standards (privacy, governance, conventions, quality) co-built
+    with the architect and Data Platform Manager
+  - Owned and defended architectural trade-offs (e.g. enforced removal of a cross-account
+    Glue DB pull that breached enterprise integration patterns)
+  - Managed critical crises — UK regulatory (commissions, first MVP in 2 weeks, sub-5-day
+    iterations), MWAA performance (full refactoring in under 3 weeks with external
+    expert and cross-pipeline rollout)
+  - Coached inshore, nearshore and offshore engineers — new joiners productive in
+    1 week
+  - Evangelized data culture and accelerated delivery through intensive GenAI and
+    Kiro usage
+  - International business ownership (DE, GB, ES, FR plus 4 other countries) — bridging
+    Data Office, country business teams and technical squads
   technologies:
   - Snowflake
-  - AWS (S3, Glue)
-  - Python
+  - AWS (S3, Glue, MWAA)
   - dbt
   - Airflow
   - Astronomer Cosmos
   - DAG Factory
   - Elementary
+  - Python
+  - dlthub
+  - Modélisation 3NF / Data Vault
+  - Data contracts
+  - GenAI / Kiro
   - SQL
 - title_fr: Software Architect & Innovation
   title_en: Software Architect & Innovation
@@ -45,39 +69,46 @@ experiences:
   start: 2016
   end: 2021
   description_fr:
-  - Premier PoC IA avec IBM Watson
-  - Étude de solutions d'agent conversationnel (chatbot)
-  - Participation à la définition du business model d'entreprise ( sur base BIAN, Open Banking, référentiel d'architecture de SFS)
-  - Du PoC à la solution de production, MongoDB et mise en place de la plateforme data digital (MongoDB + API Spring
-    Boot + ingestion Kafka/RabbitMQ)
-  - Architecte software sur de nombreux sujets — Médiation Layer progiciel EKIP (Line
-    Data)
-  - Refactoring et migration AWS de la plateforme MongoDB/API de SFS
-  - Support sur la plateforme Hadoop/Spark Java
-  - Support aux équipes Spring Java
+  - Architecte de la plateforme digital banking exposant le core banking aux canaux
+    client, vendeur et back-office sur 8 pays — 30+ consommateurs, jusqu'à 12M de
+    requêtes/mois en pic
+  - Introduction et évangélisation chez SFS des patterns microservices et event-driven
+    (jusque-là inexistants) — découpage applicatif aligné sur le framework métier
+    BIAN, ~10 microservices Spring Boot
+  - Pilotage du refactoring et de la migration cloud de la plateforme on-prem (Docker
+    / Ansible) vers AWS — démarche FinOps continue (night mode, arrêt automatique
+    des préprod, optimisation runtime)
+  - Participation à la définition du business model d'entreprise (BIAN, Open Banking,
+    référentiel d'architecture SFS)
+  - Innovation — premier PoC IA SFS avec IBM Watson, étude des solutions d'agents
+    conversationnels
+  - Architecte software sur la Médiation Layer du progiciel EKIP (Line Data)
+  - Support sur la plateforme Hadoop / Spark Java et accompagnement des équipes Spring
   description_en:
-  - First AI PoC with IBM Watson
-  - Chatbot solution study and evaluation
-  - Participant to Enterprise Business Model definition  (From Bian, Open Banking, sfs architecture referencial )
-  - MongoDB PoC to production ready plateform and implementation of the digital data platform (MongoDB + Spring
-    Boot API + Kafka/RabbitMQ ingestion)
-  - Software architect on multiple topics — Mediation Layer for EKIP package (Line
-    Data)
-  - Refactoring and AWS migration of the SFS MongoDB/API platform
-  - Support on the Hadoop/Spark Java platform
-  - Support for Spring Java teams
+  - Architected the digital banking platform exposing core banking to customer, sales
+    and back-office channels across 8 countries — 30+ consumers, up to 12M requests
+    per month at peak
+  - Introduced and evangelized microservices and event-driven patterns at SFS (previously
+    non-existent) — application boundaries aligned on the BIAN business framework,
+    ~10 Spring Boot microservices
+  - Led the refactoring and cloud migration of the on-prem platform (Docker / Ansible)
+    to AWS — continuous FinOps approach (night mode, automatic pre-prod shutdown,
+    runtime optimization)
+  - Contributed to the Enterprise Business Model definition (BIAN, Open Banking, SFS
+    architecture reference)
+  - Innovation — first SFS AI PoC on IBM Watson, chatbot solutions evaluation
+  - Software architect on the EKIP package Mediation Layer (Line Data)
+  - Support on the Hadoop / Spark Java platform and coaching of Spring teams
   technologies:
-  - Java
-  - Spring Boot
-  - Spring Cloud
+  - Java / Spring Boot / Spring Cloud
   - MongoDB
   - Kafka
   - RabbitMQ
+  - Docker / Ansible
   - AWS
-  - Docker
-  - Hadoop
-  - Spark
+  - BIAN
   - IBM Watson
+  - Hadoop / Spark
   display: true
 - title_fr: Tech Lead Java
   title_en: Java Tech Lead
@@ -86,20 +117,32 @@ experiences:
   start: 2010
   end: 2016
   description_fr:
-  - Développement d'applications Java d'entreprise
-  - ETL home-made en Java en guise de médiation layer batch
-  - Solution complète de paiement en 4x sans frais (front office et back office) en
-    full Spring — responsable des backends
+  - Architecte software et Tech Lead sur la solution de paiement en 4x sans frais
+    bout en bout (front office + back office, recouvrement, comptabilité) — déployée
+    sur ~7 500 concessionnaires, plusieurs milliers de demandes/mois, toujours en
+    production
+  - Première application Java SFS avec découpage front / back malgré l'usage de Struts
+    2 — pattern devenu référence interne pour les chantiers Java suivants
+  - Supervision et coordination d'une équipe de développement offshore (Chine)
+  - Cadrage et stabilisation continus d'un besoin métier complexe sur le recouvrement
+    et la comptabilité
+  - Conception et delivery d'un ETL home-made en Java servant de Mediation Layer batch
   - Encadrement d'équipes de développement sur périmètre Java et Data
   description_en:
-  - Enterprise Java application development
-  - Home-made Java ETL as batch mediation layer
-  - Complete 4x interest-free payment solution (front office and back office) in full
-    Spring — backend lead
-  - Development team management on Java and Data scope
+  - Software architect and Tech Lead on the end-to-end 4x interest-free payment solution
+    (front office + back office, collections, accounting) — rolled out to ~7,500 dealers,
+    thousands of requests per month, still live today
+  - First SFS Java application with front / back separation despite using Struts 2
+    — pattern became an internal reference for later Java initiatives
+  - Supervised and coordinated an offshore development team (China)
+  - Continuous framing and stabilization of a complex business need on collections
+    and accounting
+  - Designed and delivered a home-made Java ETL serving as a batch Mediation Layer
+  - Coached development teams on Java and Data scope
   technologies:
-  - Java
+  - Java / JEE
   - Spring
+  - Struts 2
   - Oracle
   - PostgreSQL
   - Shell
@@ -112,26 +155,37 @@ experiences:
   start: 2002
   end: 2010
   description_fr:
-  - Mise en place d'un framework d'industrialisation en Shell/Perl pour accélérer
-    les déploiements
-  - Mise en place de la stratégie de Version Control des outils Intégration/Ops
-  - Intégration d'applications Java sur Unix/Linux et Windows
-  - Participation active aux évolutions des architectures techniques de la banque
-  - Participation aux audits réglementaires
-  - Formation des équipes
+  - Conception et delivery d'un framework d'industrialisation Shell / Perl déployé
+    sur l'ensemble du périmètre SFS — onboarding et mise en production d'une application
+    réduits de plusieurs mois à 1 semaine, framework encore en production
+  - Définition et déploiement de la stratégie Version Control SFS — premier passage
+    à Git côté Intégration, outillage de packaging, comité d'approbation des modifications
+  - Intégration d'applications Java sur Unix / Linux et Windows sur l'ensemble du
+    périmètre banque
+  - Participation active à l'évolution des architectures techniques de la banque
+  - Référent Intégration sur les audits Banque Centrale, audits métier et ISO — production
+    documentation et réponse directe aux auditeurs
+  - Formation et accompagnement des équipes Dev / Ops sur le framework et les nouveaux
+    standards
   description_en:
-  - Built an industrialization framework in Shell/Perl to accelerate deployments
-  - Defined the Version Control strategy for Integration/Ops tools
-  - Java application integration on Unix/Linux and Windows
-  - Active participation in the bank's technical architecture evolution
-  - Participation in regulatory audits
-  - Team training and knowledge transfer
+  - Designed and delivered a Shell / Perl industrialization framework rolled out across
+    the full SFS scope — application onboarding and go-live reduced from several months
+    to 1 week, framework still in production today
+  - Defined and rolled out the SFS Version Control strategy — first Git adoption on
+    the Integration side, packaging tooling, change approval committee setup
+  - Integrated Java applications on Unix / Linux and Windows across the full banking
+    scope
+  - Actively contributed to the evolution of the bank's technical architecture
+  - Integration reference on Central Bank, business and ISO audits — produced documentation
+    and answered auditors directly
+  - Trained and coached Dev / Ops teams on the framework and the new standards
   technologies:
   - Shell
   - Perl
   - Java
-  - Unix/Linux
+  - Unix / Linux
   - Windows Server
+  - Git
   display: true
 - title_fr: Formateur "Réseaux" en BTS
   title_en: Network Teacher (BTS level)
