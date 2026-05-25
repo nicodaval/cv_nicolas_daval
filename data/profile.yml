@@ -1,6 +1,12 @@
 name: Nicolas DAVAL
 title: Data Architect & Tech Lead
 location: Baume-les-Dames, France
+
+personal_status:
+  display: false
+  value_fr: "Marié, 3 enfants"
+  value_en: "Married, 3 children"
+
 mobility:
   type: Hybride / Remote
   zones:
@@ -9,7 +15,7 @@ mobility:
   note: "Conjointe basée à Ceyzériat"
 
 contact:
-  email: nicolas.daval@email.com  # À remplacer par le vrai email
+  email: nicolas.daval@gmail.com  # À remplacer par le vrai email
   linkedin: https://linkedin.com/in/nicolasdaval
   github: https://github.com/nicodaval
 
