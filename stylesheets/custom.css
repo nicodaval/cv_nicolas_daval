@@ -1,0 +1,507 @@
+/* ==========================================================================
+   Material Design CV — Design Tokens
+   ========================================================================== */
+
+:root {
+  /* Material You inspired palette */
+  --cv-primary: #1a73e8;           /* Google Blue — headers, accents */
+  --cv-primary-dark: #1557b0;      /* Darker blue — hover states */
+  --cv-primary-light: #e8f0fe;     /* Light blue — backgrounds, highlights */
+  --cv-secondary: #7c3aed;         /* Vibrant purple — secondary accent */
+  --cv-secondary-light: #ede9fe;   /* Light purple */
+  --cv-accent: #f97316;            /* Warm orange — CTA buttons, emphasis */
+  --cv-accent-dark: #ea580c;       /* Darker orange — hover */
+  --cv-success: #16a34a;           /* Green — skill bars */
+  
+  /* Neutrals */
+  --cv-bg: #f8fafc;                /* Soft gray background */
+  --cv-surface: #ffffff;           /* Card surfaces */
+  --cv-text: #1f2937;             /* Dark gray text */
+  --cv-text-secondary: #6b7280;   /* Medium gray */
+  --cv-text-light: #9ca3af;       /* Light gray */
+  --cv-border: #e5e7eb;           /* Subtle borders */
+  --cv-divider: #f3f4f6;          /* Section dividers */
+  
+  /* Shadows — Material elevation */
+  --cv-shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --cv-shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --cv-shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+  --cv-shadow-xl: 0 20px 25px rgba(0,0,0,0.1), 0 8px 10px rgba(0,0,0,0.04);
+  
+  /* Spacing */
+  --cv-spacing-xs: 0.25rem;
+  --cv-spacing-sm: 0.5rem;
+  --cv-spacing-md: 1rem;
+  --cv-spacing-lg: 1.5rem;
+  --cv-spacing-xl: 2rem;
+  --cv-spacing-2xl: 3rem;
+  
+  /* Border radius — Material rounded */
+  --cv-radius: 12px;
+  --cv-radius-sm: 8px;
+  --cv-radius-lg: 16px;
+  --cv-radius-full: 9999px;
+  
+  /* Timeline */
+  --cv-timeline-line: 2px;
+  --cv-timeline-marker: 14px;
+  
+  /* Transitions */
+  --cv-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   Material Theme Overrides
+   ========================================================================== */
+
+/* Override Material primary color */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1a73e8;
+  --md-primary-fg-color--light: #4a9af5;
+  --md-primary-fg-color--dark: #1557b0;
+  --md-accent-fg-color: #f97316;
+}
+
+/* Hide the right-side TOC */
+.md-sidebar--secondary {
+  display: none;
+}
+
+/* Make content wider without TOC */
+.md-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hide left nav on CV pages for cleaner look */
+@media (min-width: 76.25em) {
+  .md-sidebar--primary {
+    display: none;
+  }
+  .md-content {
+    margin-left: auto;
+  }
+}
+
+/* Page background */
+.md-main {
+  background: var(--cv-bg);
+}
+
+/* ==========================================================================
+   Typography Enhancements
+   ========================================================================== */
+
+.md-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cv-text);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--cv-spacing-xs);
+}
+
+.md-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cv-primary);
+  margin-top: var(--cv-spacing-2xl);
+  padding-bottom: var(--cv-spacing-sm);
+  border-bottom: 2px solid var(--cv-primary-light);
+}
+
+.md-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cv-text);
+}
+
+/* Horizontal rules as subtle dividers */
+.md-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--cv-border), transparent);
+  margin: var(--cv-spacing-2xl) 0;
+}
+
+/* ==========================================================================
+   Timeline Component — Material Style
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  margin: var(--cv-spacing-xl) 0;
+}
+
+/* Gradient vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: var(--cv-timeline-line);
+  background: linear-gradient(to bottom, var(--cv-primary), var(--cv-secondary));
+  border-radius: var(--cv-radius-full);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--cv-spacing-xl);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Glowing marker */
+.timeline-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 6px;
+  width: var(--cv-timeline-marker);
+  height: var(--cv-timeline-marker);
+  border-radius: 50%;
+  background: var(--cv-primary);
+  border: 3px solid var(--cv-surface);
+  box-shadow: 0 0 0 3px var(--cv-primary-light), var(--cv-shadow-sm);
+  transition: var(--cv-transition);
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 4px var(--cv-primary-light), var(--cv-shadow-md);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cv-primary);
+  background: var(--cv-primary-light);
+  padding: 2px 10px;
+  border-radius: var(--cv-radius-full);
+  margin-bottom: var(--cv-spacing-sm);
+  letter-spacing: 0.02em;
+}
+
+.timeline-content {
+  background: var(--cv-surface);
+  border-radius: var(--cv-radius);
+  padding: var(--cv-spacing-lg);
+  box-shadow: var(--cv-shadow-sm);
+  border: 1px solid var(--cv-border);
+  transition: var(--cv-transition);
+}
+
+.timeline-content:hover {
+  box-shadow: var(--cv-shadow-md);
+  transform: translateX(4px);
+}
+
+.timeline-content h3 {
+  margin: 0 0 var(--cv-spacing-xs) 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cv-text);
+}
+
+.timeline-company {
+  color: var(--cv-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: var(--cv-spacing-sm);
+}
+
+.timeline-content ul {
+  margin: var(--cv-spacing-sm) 0 0 0;
+  padding-left: 1.2rem;
+}
+
+.timeline-content li {
+  font-size: 0.9rem;
+  color: var(--cv-text-secondary);
+  margin-bottom: var(--cv-spacing-xs);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Skill Bar Component — Material Style
+   ========================================================================== */
+
+.skills-section {
+  margin-bottom: var(--cv-spacing-xl);
+  background: var(--cv-surface);
+  border-radius: var(--cv-radius);
+  padding: var(--cv-spacing-lg);
+  box-shadow: var(--cv-shadow-sm);
+  border: 1px solid var(--cv-border);
+}
+
+.skills-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cv-primary);
+  margin: 0 0 var(--cv-spacing-md) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.skill-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--cv-spacing-sm);
+  margin-bottom: 10px;
+}
+
+.skill-label {
+  flex: 0 0 180px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cv-text);
+}
+
+.skill-track {
+  flex: 1;
+  height: 8px;
+  background: var(--cv-divider);
+  border-radius: var(--cv-radius-full);
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: var(--cv-radius-full);
+  background: linear-gradient(90deg, var(--cv-primary), var(--cv-secondary));
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-percent {
+  flex: 0 0 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cv-text-secondary);
+  text-align: right;
+}
+
+/* ==========================================================================
+   Card Component — Material Elevated
+   ========================================================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--cv-spacing-lg);
+  margin: var(--cv-spacing-lg) 0;
+}
+
+.card {
+  background: var(--cv-surface);
+  border-radius: var(--cv-radius);
+  padding: var(--cv-spacing-lg);
+  box-shadow: var(--cv-shadow-sm);
+  border: 1px solid var(--cv-border);
+  transition: var(--cv-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cv-primary), var(--cv-secondary));
+  opacity: 0;
+  transition: var(--cv-transition);
+}
+
+.card:hover {
+  box-shadow: var(--cv-shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: var(--cv-spacing-sm);
+}
+
+.card h3 {
+  margin: 0 0 var(--cv-spacing-xs) 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cv-text);
+}
+
+.card-subtitle {
+  color: var(--cv-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0 0 var(--cv-spacing-xs) 0;
+}
+
+.card-date {
+  color: var(--cv-text-light);
+  font-size: 0.8rem;
+  margin: var(--cv-spacing-sm) 0 0 0;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--cv-text-secondary);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   PDF Download Button — Material FAB Style
+   ========================================================================== */
+
+.pdf-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--cv-spacing-sm);
+  background: linear-gradient(135deg, var(--cv-accent), var(--cv-accent-dark));
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: var(--cv-radius-full);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--cv-shadow-md);
+  transition: var(--cv-transition);
+  letter-spacing: 0.01em;
+}
+
+.pdf-download-btn:hover {
+  background: linear-gradient(135deg, var(--cv-accent-dark), #c2410c);
+  box-shadow: var(--cv-shadow-lg);
+  transform: translateY(-2px) scale(1.02);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.pdf-download-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: var(--cv-shadow-sm);
+}
+
+/* ==========================================================================
+   Lists — Material Style
+   ========================================================================== */
+
+.md-content ul:not(.timeline-content ul) {
+  list-style: none;
+  padding-left: 0;
+}
+
+.md-content ul:not(.timeline-content ul) li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: var(--cv-spacing-sm);
+}
+
+.md-content ul:not(.timeline-content ul) li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cv-primary);
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline {
+    padding-left: 2rem;
+  }
+
+  .timeline-marker {
+    left: -2rem;
+  }
+
+  .skill-label {
+    flex: 0 0 140px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile (<768px) */
+@media (max-width: 767px) {
+  :root {
+    --cv-spacing-xl: 1.5rem;
+    --cv-spacing-2xl: 2rem;
+  }
+
+  .md-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .md-content h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Timeline mobile */
+  .timeline {
+    padding-left: 1.8rem;
+    overflow-x: hidden;
+  }
+
+  .timeline-marker {
+    left: -1.8rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-content {
+    padding: var(--cv-spacing-md);
+  }
+
+  .timeline-content:hover {
+    transform: none;
+  }
+
+  /* Cards single column */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--cv-spacing-md);
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  /* Skill bars */
+  .skill-label {
+    flex: 0 0 110px;
+    font-size: 0.8rem;
+  }
+
+  .skills-section {
+    padding: var(--cv-spacing-md);
+  }
+
+  /* PDF button full width */
+  .pdf-download-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
