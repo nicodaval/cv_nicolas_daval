@@ -1,0 +1,44 @@
+diplomas:
+  - title_fr: Diplôme d'Ingénieur
+    title_en: Engineering Degree (Master's equivalent)
+    institution: CNAM
+    year: 2006
+
+  - title_fr: Maîtrise Informatique
+    title_en: Master's Degree in Computer Science
+    institution: CNAM
+    year: 2004
+
+  - title_fr: CASIE — Concepteur et Administrateur des Systèmes d'Information d'Entreprise
+    title_en: CASIE — Enterprise Information Systems Designer & Administrator
+    institution: null
+    year: 2002
+
+  - title_fr: DUT Informatique
+    title_en: DUT in Computer Science (2-year technical degree)
+    institution: null
+    year: 2000
+
+  - title_fr: Baccalauréat Scientifique (Bac S)
+    title_en: Scientific Baccalaureate
+    institution: null
+    year: 1998
+
+training:
+  - name: AWS Solutions Architect
+    provider: AWS
+  - name: AWS DevOps
+    provider: AWS
+  - name: AWS Go Build Data & IA
+    provider: AWS
+  - name: Spring Framework
+    provider: null
+  - name: Oracle 9
+    provider: Oracle
+  - name: Snowflake Starter Kit
+    provider: Snowflake
+  - name: MongoDB University — Parcours Développeur Java
+    provider: MongoDB
+
+certifications: []
+# Pas de certification officielle pour le moment

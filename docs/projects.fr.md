@@ -5,42 +5,42 @@ description: Sélection de projets clés réalisés par Nicolas DAVAL - Data Arc
 
 # Projets Clés
 
-Voici une sélection de projets significatifs qui illustrent mon expertise en architecture data, cloud et développement logiciel. Chaque projet représente un défi technique majeur ayant généré un impact mesurable pour l'organisation.
+Voici une sélection de projets significatifs qui illustrent mon parcours et mon expertise en architecture data, cloud et développement logiciel. Chaque projet représente un défi technique majeur réalisé chez Stellantis Financial Services.
 
 <div class="card-grid">
   <div class="card">
-    <div class="card-icon">🚀</div>
-    <h3>Plateforme Data Snowflake</h3>
-    <p class="card-subtitle">Stellantis Financial Services</p>
-    <p>Migration et consolidation des données de financement automobile pour l'ensemble des filiales européennes vers une plateforme Snowflake unifiée. Conception de l'architecture data, modélisation dimensionnelle et orchestration des pipelines avec dbt et Airflow.</p>
-    <p><strong>Résultat :</strong> Réduction de 60% des temps de traitement, vision consolidée pour 8 filiales européennes.</p>
-    <p class="card-date">Technologies : Snowflake, dbt, Airflow, Python, AWS S3</p>
+    <div class="card-icon">❄️</div>
+    <h3>Plateforme Data Snowflake sur AWS</h3>
+    <p class="card-subtitle">Stellantis Financial Services — 2021 à aujourd'hui</p>
+    <p>Définition et mise en œuvre de la plateforme data d'entreprise sur Snowflake/AWS. Conception du framework EL (Extract-Load) et du framework dbt pour la transformation. Orchestration via Airflow/Astronomer Cosmos. Gouvernance et privacy intégrées.</p>
+    <p><strong>Résultats :</strong> Plateforme data unifiée pour les filiales européennes (DE, GB, ES, FR). Frameworks EL et dbt industrialisés. Stratégie privacy définie et implémentée.</p>
+    <p class="card-date">Technologies : Snowflake, AWS S3, AWS Glue, dbt, Airflow, Astronomer Cosmos, DAG Factory, Elementary, Python</p>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">🔌</div>
+    <h3>Plateforme Digital MongoDB + API</h3>
+    <p class="card-subtitle">Stellantis Financial Services — 2016 à 2021</p>
+    <p>Conception et mise en place de la plateforme data digital : MongoDB + API Spring Boot avec ingestion des données via Kafka et RabbitMQ. Migration ultérieure vers AWS.</p>
+    <p><strong>Résultats :</strong> Plateforme digitale opérationnelle. Migration réussie vers AWS. Architecture event-driven en production.</p>
+    <p class="card-date">Technologies : MongoDB, Spring Boot, Kafka, RabbitMQ, AWS, Docker</p>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">💳</div>
+    <h3>Solution Paiement 4x Sans Frais</h3>
+    <p class="card-subtitle">Stellantis Financial Services — 2010 à 2016</p>
+    <p>Solution complète de paiement en 4x sans frais couvrant les fonctions front office et back office, développée en full Spring. Responsable des backends.</p>
+    <p><strong>Résultats :</strong> Solution de paiement en production. Responsabilité complète des backends.</p>
+    <p class="card-date">Technologies : Java, Spring, Oracle, PostgreSQL</p>
   </div>
 
   <div class="card">
     <div class="card-icon">⚙️</div>
-    <h3>Microservices Financement Auto</h3>
-    <p class="card-subtitle">PSA Finance (devenu Stellantis FS)</p>
-    <p>Architecture et développement d'une plateforme de microservices pour la gestion des contrats de financement automobile. Mise en place d'une architecture event-driven avec Kafka pour le traitement asynchrone des événements métier.</p>
-    <p><strong>Résultat :</strong> 2M+ contrats gérés, haute disponibilité 99.9%, time-to-market réduit de 40%.</p>
-    <p class="card-date">Technologies : Java/Spring Boot, AWS ECS, PostgreSQL, Kafka, Terraform</p>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">☁️</div>
-    <h3>Migration Cloud AWS</h3>
-    <p class="card-subtitle">PSA Finance</p>
-    <p>Pilotage de la migration de l'infrastructure on-premise vers AWS avec une approche Infrastructure as Code. Mise en place des pipelines CI/CD, containerisation des applications et automatisation complète des déploiements.</p>
-    <p><strong>Résultat :</strong> Réduction de 40% des coûts d'infrastructure, déploiements automatisés en moins de 15 minutes.</p>
-    <p class="card-date">Technologies : AWS, Terraform, Jenkins, Docker, ECS</p>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">🛡️</div>
-    <h3>Data Governance Framework</h3>
-    <p class="card-subtitle">Stellantis Financial Services</p>
-    <p>Définition et mise en œuvre d'un framework de gouvernance des données incluant des standards de qualité, des tests automatisés et des processus de validation. Accompagnement des équipes métier dans l'adoption des pratiques data-driven.</p>
-    <p><strong>Résultat :</strong> Couverture qualité 95%, adoption par 5 équipes métier, réduction de 70% des incidents data.</p>
-    <p class="card-date">Technologies : dbt tests, Great Expectations, Snowflake, Python</p>
+    <h3>Framework d'Industrialisation Ops</h3>
+    <p class="card-subtitle">Stellantis Financial Services — 2002 à 2010</p>
+    <p>Conception d'un framework d'industrialisation en Shell/Perl pour accélérer les déploiements applicatifs. Mise en place de la stratégie de version control.</p>
+    <p><strong>Résultats :</strong> Accélération significative des déploiements. Stratégie de version control adoptée par les équipes.</p>
+    <p class="card-date">Technologies : Shell, Perl, Unix/Linux</p>
   </div>
 </div>

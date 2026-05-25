@@ -1,0 +1,72 @@
+categories:
+  - name_fr: Data & Cloud
+    name_en: Data & Cloud
+    skills:
+      - name: Snowflake
+        level: 75
+      - name: dbt
+        level: 75
+      - name: Airflow
+        level: 75
+      - name: Astronomer Cosmos
+        level: 75
+      - name: DAG Factory
+        level: 75
+      - name: Elementary
+        level: 75
+      - name: AWS (S3, Glue, DMS, API Gateway)
+        level: 80
+      - name: Python
+        level: 80
+      - name: SQL
+        level: 80
+
+  - name_fr: Développement & Architecture
+    name_en: Development & Architecture
+    skills:
+      - name: Java / Spring / Spring Cloud
+        level: 90
+      - name: Architecture Event-Driven / CQRS
+        level: 80
+      - name: Kafka / RabbitMQ
+        level: 80
+      - name: MongoDB
+        level: 75
+      - name: Oracle / PostgreSQL / MySQL
+        level: 85
+      - name: Docker
+        level: 75
+      - name: Shell / Perl
+        level: 80
+      - name: API REST
+        level: 85
+
+  - name_fr: Data Quality & Gouvernance
+    name_en: Data Quality & Governance
+    skills:
+      - name: Elementary (Data Quality)
+        level: 75
+      - name: Data Governance
+        level: 75
+      - name: Privacy / RGPD
+        level: 75
+
+  - name_fr: GenAI & Innovation
+    name_en: GenAI & Innovation
+    skills:
+      - name: GenAI / MCP
+        level: 70
+      - name: IBM Watson (PoC)
+        level: 60
+      - name: YAML
+        level: 85
+
+  - name_fr: Outils & Méthodologies
+    name_en: Tools & Methodologies
+    skills:
+      - name: Git / Version Control
+        level: 85
+      - name: CI/CD
+        level: 80
+      - name: Agile / Scrum
+        level: 80

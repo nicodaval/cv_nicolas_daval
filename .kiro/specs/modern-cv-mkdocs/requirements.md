@@ -147,3 +147,26 @@ This document defines the requirements for a modern, bilingual (French + English
 1. THE CV_Site SHALL define a site name, description, and author in the MkDocs configuration
 2. THE CV_Site SHALL include appropriate meta tags for social sharing (Open Graph)
 3. THE CV_Site SHALL set the site URL to the GitHub Pages deployment URL
+
+### Requirement 12: Data-Driven Content Architecture
+
+**User Story:** As a site owner, I want my CV data stored in structured files (YAML) separated from the presentation, so that I can update my information easily without touching the page layout.
+
+#### Acceptance Criteria
+
+1. THE project SHALL include a `data/` directory at the project root containing structured YAML files
+2. THE data directory SHALL contain separate files for: profile (`profile.yml`), experiences (`experiences.yml`), education (`education.yml`), skills (`skills.yml`), projects (`projects.yml`), and interests (`interests.yml`)
+3. EACH data file SHALL contain both French and English content (bilingual fields with `_fr` and `_en` suffixes)
+4. THE CV pages SHALL be generated or manually updated from the data files as the single source of truth
+5. THE data files SHALL include all real professional information for Nicolas DAVAL (not placeholder content)
+
+### Requirement 13: Personal Information and Job Search Preferences
+
+**User Story:** As a site owner, I want my job search preferences (salary, mobility, location) stored in the data files for personal reference, without publishing them on the public site.
+
+#### Acceptance Criteria
+
+1. THE profile.yml SHALL include current and target salary information
+2. THE profile.yml SHALL include mobility preferences (hybrid/remote) and geographic zones
+3. THE salary and mobility information SHALL NOT be displayed on the public CV_Site
+4. THE data SHALL serve as a personal reference for job applications and recruiter discussions

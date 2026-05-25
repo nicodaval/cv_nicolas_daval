@@ -1,0 +1,100 @@
+projects:
+  - title_fr: Plateforme Data Snowflake sur AWS
+    title_en: Snowflake Data Platform on AWS
+    company: Stellantis Financial Services
+    period: 2021 - présent
+    description_fr: >
+      Définition et mise en œuvre de la plateforme data d'entreprise sur Snowflake/AWS.
+      Conception du framework EL (Extract-Load) et du framework dbt pour la transformation.
+      Orchestration via Airflow/Astronomer Cosmos. Gouvernance et privacy intégrées.
+    description_en: >
+      Design and implementation of the enterprise data platform on Snowflake/AWS.
+      EL (Extract-Load) framework and dbt transformation framework design.
+      Orchestration via Airflow/Astronomer Cosmos. Built-in governance and privacy.
+    technologies:
+      - Snowflake
+      - AWS S3
+      - AWS Glue
+      - dbt
+      - Airflow
+      - Astronomer Cosmos
+      - DAG Factory
+      - Elementary
+      - Python
+    outcomes_fr:
+      - Plateforme data unifiée pour les filiales européennes (DE, GB, ES, FR)
+      - Framework EL et dbt industrialisés
+      - Stratégie privacy définie et implémentée
+    outcomes_en:
+      - Unified data platform for European subsidiaries (DE, GB, ES, FR)
+      - Industrialized EL and dbt frameworks
+      - Privacy strategy defined and implemented
+
+  - title_fr: Plateforme Digital MongoDB + API
+    title_en: Digital MongoDB + API Platform
+    company: Stellantis Financial Services
+    period: 2016 - 2021
+    description_fr: >
+      Conception et mise en place de la plateforme data digital : MongoDB + API Spring Boot
+      avec ingestion des données via Kafka et RabbitMQ. Migration ultérieure vers AWS.
+    description_en: >
+      Design and implementation of the digital data platform: MongoDB + Spring Boot API
+      with data ingestion via Kafka and RabbitMQ. Later migrated to AWS.
+    technologies:
+      - MongoDB
+      - Spring Boot
+      - Kafka
+      - RabbitMQ
+      - AWS
+      - Docker
+    outcomes_fr:
+      - Plateforme digitale opérationnelle
+      - Migration réussie vers AWS
+      - Architecture event-driven en production
+    outcomes_en:
+      - Operational digital platform
+      - Successful AWS migration
+      - Event-driven architecture in production
+
+  - title_fr: Solution Paiement 4x Sans Frais
+    title_en: 4x Interest-Free Payment Solution
+    company: Stellantis Financial Services
+    period: 2010 - 2016
+    description_fr: >
+      Solution complète de paiement en 4x sans frais couvrant les fonctions front office
+      et back office, développée en full Spring. Responsable des backends.
+    description_en: >
+      Complete 4x interest-free payment solution covering front office and back office
+      functions, developed in full Spring. Backend lead.
+    technologies:
+      - Java
+      - Spring
+      - Oracle
+      - PostgreSQL
+    outcomes_fr:
+      - Solution de paiement en production
+      - Responsabilité complète des backends
+    outcomes_en:
+      - Payment solution in production
+      - Full backend ownership
+
+  - title_fr: Framework d'Industrialisation Ops
+    title_en: Ops Industrialization Framework
+    company: Stellantis Financial Services
+    period: 2002 - 2010
+    description_fr: >
+      Conception d'un framework d'industrialisation en Shell/Perl pour accélérer les
+      déploiements applicatifs. Mise en place de la stratégie de version control.
+    description_en: >
+      Design of an industrialization framework in Shell/Perl to accelerate application
+      deployments. Version control strategy implementation.
+    technologies:
+      - Shell
+      - Perl
+      - Unix/Linux
+    outcomes_fr:
+      - Accélération significative des déploiements
+      - Stratégie de version control adoptée par les équipes
+    outcomes_en:
+      - Significant deployment acceleration
+      - Version control strategy adopted by teams

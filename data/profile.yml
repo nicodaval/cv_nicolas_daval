@@ -1,0 +1,38 @@
+name: Nicolas DAVAL
+title: Data Architect & Tech Lead
+location: Baume-les-Dames, France
+mobility:
+  type: Hybride / Remote
+  zones:
+    - Axe Bourg-en-Bresse — Lyon
+    - Axe Bourg-en-Bresse — Grenoble
+  note: "Conjointe basée à Ceyzériat"
+
+contact:
+  email: nicolas.daval@email.com  # À remplacer par le vrai email
+  linkedin: https://linkedin.com/in/nicolasdaval
+  github: https://github.com/nicodaval
+
+languages:
+  - name: Français
+    level: Langue maternelle
+  - name: Anglais
+    level: Professionnel (TOEIC 700)
+
+salary:
+  current: "65K€ + variable + prime"
+  target: "85K€ — 100K€"
+
+summary_fr: >
+  Architecte Data et Tech Lead avec plus de 22 ans d'expérience chez Stellantis Financial Services.
+  Spécialisé dans la conception de plateformes data cloud (Snowflake, AWS, dbt, Airflow),
+  l'architecture logicielle (Java/Spring, microservices, event-driven) et le pilotage d'équipes
+  internationales (France, Argentine, Chine, Inde). Reconnu pour sa capacité à vulgariser les
+  sujets techniques, gérer les situations de crise et mener des projets réglementaires sensibles.
+
+summary_en: >
+  Data Architect and Tech Lead with 22+ years of experience at Stellantis Financial Services.
+  Specialized in cloud data platform design (Snowflake, AWS, dbt, Airflow), software architecture
+  (Java/Spring, microservices, event-driven) and international team leadership (France, Argentina,
+  China, India). Known for ability to simplify complex technical topics, manage crisis situations,
+  and deliver sensitive regulatory projects.
