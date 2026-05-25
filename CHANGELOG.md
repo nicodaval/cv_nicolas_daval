@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/nicodaval/cv_nicolas_daval/compare/v1.0.0...v1.1.0) (2026-05-25)
+
+
+### Features
+
+* **data:** merge Hadoop migration and Snowflake platform into one tr… ([2cb10ba](https://github.com/nicodaval/cv_nicolas_daval/commit/2cb10ba76d0dd9e9a85940fddd5f23574e2618ea))
+* **data:** merge Hadoop migration and Snowflake platform into one transformation program ([62392bd](https://github.com/nicodaval/cv_nicolas_daval/commit/62392bdcf98449117eb54c0c36a65533463fbef8))
+
 ## 1.0.0 (2026-05-25)
 
 
