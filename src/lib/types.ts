@@ -49,6 +49,8 @@ export interface Project {
   period: string;
   description_fr: string;
   description_en: string;
+  contributions_fr?: string[];
+  contributions_en?: string[];
   technologies: string[];
   outcomes_fr: string[];
   outcomes_en: string[];
