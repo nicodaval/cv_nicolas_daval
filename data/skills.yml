@@ -8,6 +8,12 @@ categories:
   - name: dbt
     level: avancé
     display: true
+  - name: Modélisation 3NF
+    level: avancé
+    display: true
+  - name: Data Vault V2
+    level: intermédiaire
+    display: true
   - name: Airflow
     level: avancé
     display: true

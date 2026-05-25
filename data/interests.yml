@@ -20,6 +20,11 @@ soft_skills:
   detail_fr: Promotion de la culture data et des bonnes pratiques au sein de l'organisation
   detail_en: Promoting data culture and best practices within the organization
   display: true
+- name_fr: Connaissance du cadre bancaire
+  name_en: Banking framework expertise
+  detail_fr: Framework BIAN et cadre réglementaire bancaire
+  detail_en: BIAN framework and banking regulatory environment
+  display: true
 interests:
 - name_fr: Badminton
   name_en: Badminton

@@ -47,7 +47,8 @@ experiences:
   description_fr:
   - Premier PoC IA avec IBM Watson
   - Étude de solutions d'agent conversationnel (chatbot)
-  - PoC MongoDB et mise en place de la plateforme data digital (MongoDB + API Spring
+  - Participation à la définition du business model d'entreprise ( sur base BIAN, Open Banking, référentiel d'architecture de SFS)
+  - Du PoC à la solution de production, MongoDB et mise en place de la plateforme data digital (MongoDB + API Spring
     Boot + ingestion Kafka/RabbitMQ)
   - Architecte software sur de nombreux sujets — Médiation Layer progiciel EKIP (Line
     Data)
@@ -57,7 +58,8 @@ experiences:
   description_en:
   - First AI PoC with IBM Watson
   - Chatbot solution study and evaluation
-  - MongoDB PoC and implementation of the digital data platform (MongoDB + Spring
+  - Participant to Enterprise Business Model definition  (From Bian, Open Banking, sfs architecture referencial )
+  - MongoDB PoC to production ready plateform and implementation of the digital data platform (MongoDB + Spring
     Boot API + Kafka/RabbitMQ ingestion)
   - Software architect on multiple topics — Mediation Layer for EKIP package (Line
     Data)
