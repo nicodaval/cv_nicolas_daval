@@ -173,52 +173,46 @@ def draw_sidebar(c, profile, skills, education, interests_data, lang):
 
     y -= 8
 
-    # Skills (compact)
+    # Skills (compact with level)
     c.setFillColor(SIDEBAR_HEADING)
     c.setFont('Helvetica-Bold', 8)
     skills_header = 'COMPÉTENCES' if lang == 'fr' else 'SKILLS'
     c.drawString(x, y, skills_header)
-    y -= 14
+    y -= 12
 
+    sidebar_text_w = SIDEBAR_W - SIDEBAR_PADDING * 2 - 4
     for category in skills:
+        if y < 25 * mm:
+            break
         cat_name = localize(category, 'name', lang)
         c.setFillColor(SIDEBAR_ACCENT)
-        c.setFont('Helvetica-Bold', 7)
+        c.setFont('Helvetica-Bold', 6.5)
         c.drawString(x + 2, y, cat_name)
-        y -= 11
+        y -= 9
 
-        c.setFillColor(SIDEBAR_TEXT)
-        c.setFont('Helvetica', 7)
-        sidebar_text_w = SIDEBAR_W - SIDEBAR_PADDING * 2 - 6
+        c.setFont('Helvetica', 6.5)
         for skill in category.get('skills', []):
-            name = skill['name']
-            text = f"• {name}"
-            # Wrap text if too wide for sidebar
-            text_w = pdfmetrics.stringWidth(text, 'Helvetica', 7)
-            if text_w > sidebar_text_w:
-                # Split into two lines
-                words = name.split()
-                line1 = '• '
-                line2_words = []
-                for word in words:
-                    test = line1 + word + ' '
-                    if pdfmetrics.stringWidth(test, 'Helvetica', 7) < sidebar_text_w:
-                        line1 = test
-                    else:
-                        line2_words.append(word)
-                c.drawString(x + 4, y, line1.strip())
-                y -= 9
-                if line2_words:
-                    c.drawString(x + 10, y, ' '.join(line2_words))
-                    y -= 9
-            else:
-                c.drawString(x + 4, y, text)
-                y -= 9
             if y < 20 * mm:
                 break
-        y -= 4
-        if y < 20 * mm:
-            break
+            name = skill['name']
+            level = skill.get('level', '')
+
+            # Draw skill name on left, level on right
+            c.setFillColor(SIDEBAR_TEXT)
+            # Truncate name only if really necessary (very tight)
+            max_name_w = sidebar_text_w - pdfmetrics.stringWidth(level, 'Helvetica', 6) - 8
+            display_name = name
+            while pdfmetrics.stringWidth(display_name, 'Helvetica', 6.5) > max_name_w and len(display_name) > 3:
+                display_name = display_name[:-2] + '…'
+
+            c.drawString(x + 4, y, f"• {display_name}")
+            # Level aligned right in lighter color
+            c.setFillColor(SIDEBAR_ACCENT)
+            c.setFont('Helvetica', 5.5)
+            c.drawRightString(SIDEBAR_W - SIDEBAR_PADDING, y, level)
+            c.setFont('Helvetica', 6.5)
+            y -= 8
+        y -= 3
 
     # Soft skills at bottom if space
     if y > 50 * mm:
@@ -254,6 +248,50 @@ def draw_sidebar(c, profile, skills, education, interests_data, lang):
             else:
                 c.drawString(x + 2, y, text)
                 y -= 10
+
+    # Interests (hobbies) at the very bottom if space
+    if y > 30 * mm and interests_data.get('interests'):
+        y -= 8
+        c.setFillColor(SIDEBAR_HEADING)
+        c.setFont('Helvetica-Bold', 8)
+        int_header = "CENTRES D'INTÉRÊT" if lang == 'fr' else 'INTERESTS'
+        c.drawString(x, y, int_header)
+        y -= 12
+
+        c.setFillColor(SIDEBAR_TEXT)
+        c.setFont('Helvetica', 7)
+        for interest in interests_data.get('interests', []):
+            if y < 15 * mm:
+                break
+            name = localize(interest, 'name', lang)
+            detail = localize(interest, 'detail', lang)
+            c.setFont('Helvetica-Bold', 6.5)
+            c.drawString(x + 2, y, f"• {name}")
+            y -= 9
+            if detail:
+                c.setFont('Helvetica', 6)
+                c.setFillColor(SIDEBAR_TEXT)
+                # Wrap detail if needed
+                sidebar_int_w = SIDEBAR_W - SIDEBAR_PADDING * 2 - 8
+                detail_w = pdfmetrics.stringWidth(detail, 'Helvetica', 6)
+                if detail_w > sidebar_int_w:
+                    words = detail.split()
+                    line = ''
+                    for word in words:
+                        test = f"{line} {word}".strip()
+                        if pdfmetrics.stringWidth(test, 'Helvetica', 6) < sidebar_int_w:
+                            line = test
+                        else:
+                            if line:
+                                c.drawString(x + 8, y, line)
+                                y -= 8
+                            line = word
+                    if line:
+                        c.drawString(x + 8, y, line)
+                        y -= 8
+                else:
+                    c.drawString(x + 8, y, detail)
+                    y -= 9
 
 
 def draw_main_content(c, profile, experiences, education, lang):
@@ -319,12 +357,12 @@ def draw_main_content(c, profile, experiences, education, lang):
 
         # Description bullets
         descriptions = exp.get(f'description_{lang}', [])
-        c.setFont('Helvetica', 7.5)
+        c.setFont('Helvetica', 7)
         c.setFillColor(MAIN_SECONDARY)
-        for desc in descriptions[:5]:  # Limit to 5 bullets
+        for desc in descriptions[:4]:  # Limit to 4 bullets for space
             if y < 25 * mm:
                 break
-            y = draw_wrapped_text(c, f"• {desc}", x + 3, y, max_w - 6, 'Helvetica', 7.5, MAIN_SECONDARY, leading=10)
+            y = draw_wrapped_text(c, f"• {desc}", x + 3, y, max_w - 6, 'Helvetica', 7, MAIN_SECONDARY, leading=9)
 
         # Technologies
         techs = exp.get('technologies', [])
@@ -335,10 +373,10 @@ def draw_main_content(c, profile, experiences, education, lang):
             # Wrap tech line if too wide
             y = draw_wrapped_text(c, tech_str, x + 3, y, max_w - 6, 'Helvetica-Oblique', 6.5, MAIN_ACCENT, leading=9)
 
-        y -= 6
+        y -= 4
 
     # Education
-    if y < 60 * mm:
+    if y < 45 * mm:
         c.showPage()
         draw_sidebar_bg(c)
         y = PAGE_H - MARGIN_TOP

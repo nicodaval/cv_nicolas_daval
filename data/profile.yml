@@ -8,11 +8,14 @@ personal_status:
   value_en: "Married, 3 children"
 
 mobility:
-  type: Hybride / Remote
+  type_fr: Hybride / Télétravail
+  type_en: Hybrid / Remote
   zones:
+    - Besançon et sa région
     - Axe Bourg-en-Bresse — Lyon
     - Axe Bourg-en-Bresse — Grenoble
-  note: "Conjointe basée à Ceyzériat"
+  note_fr: "Conjointe basée à Ceyzériat"
+  note_en: "Spouse based in Ceyzériat"
 
 contact:
   email: nicolas.daval@gmail.com  # À remplacer par le vrai email
