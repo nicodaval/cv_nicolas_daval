@@ -231,12 +231,29 @@ def draw_sidebar(c, profile, skills, education, interests_data, lang):
 
         c.setFillColor(SIDEBAR_TEXT)
         c.setFont('Helvetica', 7)
+        sidebar_ss_w = SIDEBAR_W - SIDEBAR_PADDING * 2 - 4
         for ss in interests_data.get('soft_skills', [])[:4]:
             name = localize(ss, 'name', lang)
-            if len(name) > 25:
-                name = name[:23] + '…'
-            c.drawString(x + 2, y, f"• {name}")
-            y -= 10
+            text = f"• {name}"
+            text_w = pdfmetrics.stringWidth(text, 'Helvetica', 7)
+            if text_w > sidebar_ss_w:
+                words = name.split()
+                line1 = '• '
+                line2_words = []
+                for word in words:
+                    test = line1 + word + ' '
+                    if pdfmetrics.stringWidth(test, 'Helvetica', 7) < sidebar_ss_w:
+                        line1 = test
+                    else:
+                        line2_words.append(word)
+                c.drawString(x + 2, y, line1.strip())
+                y -= 9
+                if line2_words:
+                    c.drawString(x + 8, y, ' '.join(line2_words))
+                    y -= 9
+            else:
+                c.drawString(x + 2, y, text)
+                y -= 10
 
 
 def draw_main_content(c, profile, experiences, education, lang):
