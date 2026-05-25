@@ -332,10 +332,8 @@ def draw_main_content(c, profile, experiences, education, lang):
             c.setFont('Helvetica-Oblique', 6.5)
             c.setFillColor(MAIN_ACCENT)
             tech_str = ', '.join(techs)
-            if len(tech_str) > 80:
-                tech_str = tech_str[:78] + '…'
-            c.drawString(x + 3, y, tech_str)
-            y -= 10
+            # Wrap tech line if too wide
+            y = draw_wrapped_text(c, tech_str, x + 3, y, max_w - 6, 'Helvetica-Oblique', 6.5, MAIN_ACCENT, leading=9)
 
         y -= 6
 
