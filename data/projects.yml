@@ -127,81 +127,183 @@ projects:
   - Critical data estate feeding master data, digital platform, Salesforce and MongoDB
     / API
   display: true
-- title_fr: Plateforme Digital MongoDB + API
-  title_en: Digital MongoDB + API Platform
+- title_fr: Plateforme Digital Banking — Architecture event-driven multi-pays
+  title_en: Digital Banking Platform — Event-Driven Multi-Country Architecture
   company: Stellantis Financial Services
   period: 2016 - 2021
-  description_fr: 'Conception et mise en place de la plateforme data digital : MongoDB
-    + API Spring Boot avec ingestion des données via Kafka et RabbitMQ. Migration
-    ultérieure vers AWS.
-
-    '
-  description_en: 'Design and implementation of the digital data platform: MongoDB
-    + Spring Boot API with data ingestion via Kafka and RabbitMQ. Later migrated to
-    AWS.
-
-    '
+  description_fr: "Architecture et mise en œuvre de la plateforme digitale exposant\
+    \ le core banking (initialement non 24/7) aux canaux client, vendeur et back-office\
+    \ banque sur 8 pays. Introduction chez SFS des patterns microservices et event-driven\
+    \ alors inexistants, alignement du découpage applicatif sur le framework métier\
+    \ BIAN.\n\n\nContributions principales :\n\n- Définition de l'architecture cible\
+    \ — une dizaine de microservices Spring Boot calqués sur les domaines BIAN, plateforme\
+    \ MongoDB pour l'exposition optimisée, ingestion event-driven via Kafka et RabbitMQ\
+    \ depuis le core banking.\n\n- Introduction et évangélisation des patterns event-driven\
+    \ et microservices dans une organisation jusque-là centrée monolithes Java —\
+    \ accompagnement et montée en compétence des équipes Spring.\n\n- Pilotage du\
+    \ refactoring et de la migration cloud de la plateforme on-prem (Docker / Ansible)\
+    \ vers AWS — démarche FinOps continue (night mode, arrêt automatique des préprod,\
+    \ optimisation runtime).\n\n- Tech Lead et architecte référent d'une équipe de\
+    \ 5 personnes sur le périmètre.\n\n- Travaux annexes innovation : premier PoC\
+    \ IA SFS avec IBM Watson, étude des solutions d'agents conversationnels, support\
+    \ sur la plateforme Hadoop / Spark Java.\n\n- Architecte software sur le sujet\
+    \ Mediation Layer du progiciel EKIP (Line Data).\n\n"
+  description_en: "Architected and delivered the digital banking platform exposing\
+    \ the (initially non-24/7) core banking estate to customer, sales and back-office\
+    \ channels across 8 countries. Introduced microservices and event-driven patterns\
+    \ at SFS where none existed, with application boundaries aligned on the BIAN\
+    \ business framework.\n\n\nKey contributions:\n\n- Defined target architecture\
+    \ — about 10 Spring Boot microservices mapped to BIAN domains, MongoDB platform\
+    \ for read-optimized exposure, event-driven ingestion via Kafka and RabbitMQ\
+    \ from the core banking.\n\n- Introduced and evangelized event-driven and microservices\
+    \ patterns in a previously monolith-centric Java organization — coached and upskilled\
+    \ Spring teams.\n\n- Led the refactoring and cloud migration of the on-prem platform\
+    \ (Docker / Ansible) to AWS — continuous FinOps approach (night mode, automatic\
+    \ pre-prod shutdown, runtime optimization).\n\n- Tech Lead and reference architect\
+    \ for a 5-person squad.\n\n- Innovation tracks: first SFS AI PoC on IBM Watson,\
+    \ chatbot solutions evaluation, support on the Hadoop / Spark Java platform.\n\
+    \n- Software architect on the Mediation Layer for the EKIP package (Line Data).\n\
+    \n"
   technologies:
+  - Java / Spring Boot / Spring Cloud
   - MongoDB
-  - Spring Boot
   - Kafka
   - RabbitMQ
+  - Docker / Ansible
   - AWS
-  - Docker
+  - BIAN
+  - IBM Watson
+  - Hadoop / Spark
   outcomes_fr:
-  - Plateforme digitale opérationnelle
-  - Migration réussie vers AWS
-  - Architecture event-driven en production
+  - Plateforme servant 30+ consommateurs sur 8 pays, jusqu'à 12 millions de requêtes
+    par mois en pic
+  - Introduction et adoption pérenne des patterns microservices et event-driven chez
+    SFS — modèle de référence pour les chantiers digitaux suivants
+  - Migration AWS pilotée bout en bout — passage du on-prem au cloud avec gains FinOps
+    récurrents (night mode, arrêt préprod, ajustements continus)
+  - Découpage aligné BIAN — interopérabilité métier renforcée et lecture standardisée
+    de l'architecture pour les équipes banque
+  - Montée en compétence d'équipes Spring sur les nouveaux patterns
   outcomes_en:
-  - Operational digital platform
-  - Successful AWS migration
-  - Event-driven architecture in production
+  - Platform serving 30+ consumers across 8 countries, up to 12M requests per month
+    at peak
+  - Lasting introduction and adoption of microservices and event-driven patterns at
+    SFS — reference model for subsequent digital initiatives
+  - End-to-end AWS migration — on-prem to cloud transition with recurring FinOps gains
+    (night mode, pre-prod shutdown, continuous tuning)
+  - BIAN-aligned application boundaries — stronger business interoperability and standardized
+    architecture reading for banking teams
+  - Upskilling of Spring teams on the new patterns
   display: true
-- title_fr: Solution Paiement 4x Sans Frais
-  title_en: 4x Interest-Free Payment Solution
+- title_fr: Paiement en 4x sans frais — Plateforme bancaire bout-en-bout
+  title_en: 4x Interest-Free Payment — End-to-End Banking Platform
   company: Stellantis Financial Services
   period: 2010 - 2016
-  description_fr: 'Solution complète de paiement en 4x sans frais couvrant les fonctions
-    front office et back office, développée en full Spring. Responsable des backends.
-
-    '
-  description_en: 'Complete 4x interest-free payment solution covering front office
-    and back office functions, developed in full Spring. Backend lead.
-
-    '
+  description_fr: "Architecture et delivery d'une solution complète de paiement en\
+    \ 4x sans frais à destination du réseau de concessionnaires (~7 500 points de\
+    \ vente, plusieurs milliers de demandes/mois), couvrant le front office commercial\
+    \ et l'ensemble du back office bancaire (recouvrement, comptabilité, gestion des\
+    \ impayés). Réponse à un risque concurrentiel concret — concessionnaires se tournant\
+    \ vers d'autres financeurs ou restant bloqués sur une gestion par chèque.\n\n\n\
+    Contributions principales :\n\n- Architecte software et Tech Lead Java sur l'ensemble\
+    \ de la chaîne back office, du modèle métier jusqu'à l'intégration comptable et\
+    \ recouvrement.\n\n- Première application Java SFS à introduire un découpage front\
+    \ / back malgré l'usage de Struts 2 — pattern devenu référence interne pour les\
+    \ chantiers Java suivants.\n\n- Supervision et coordination d'une équipe de développement\
+    \ offshore (Chine).\n\n- Cadrage continu d'un besoin métier peu stabilisé, particulièrement\
+    \ sur le recouvrement et la comptabilité — itérations avec les métiers banque\
+    \ jusqu'à la solution cible.\n\n- Architecture pensée dès l'origine pour un déploiement\
+    \ multi-pays.\n\n"
+  description_en: "Architected and delivered a complete 4x interest-free payment solution\
+    \ for the dealer network (~7,500 points of sale, thousands of requests per month),\
+    \ covering the sales front office and the entire banking back office (collections,\
+    \ accounting, default management). A direct response to a competitive risk —\
+    \ dealers turning to other financing partners or stuck with a check-based process.\n\
+    \n\nKey contributions:\n\n- Software architect and Java Tech Lead across the full\
+    \ back-office chain, from business model to accounting integration and collections.\n\
+    \n- First SFS Java application to introduce front / back separation despite using\
+    \ Struts 2 — a pattern that became an internal reference for later Java projects.\n\
+    \n- Supervised and coordinated an offshore development team (China).\n\n- Continuous\
+    \ scoping of a poorly defined business need, especially on collections and accounting\
+    \ — iterations with banking business teams up to the target solution.\n\n- Architecture\
+    \ designed from day one for multi-country rollout.\n\n"
   technologies:
-  - Java
+  - Java / JEE
   - Spring
+  - Struts 2
   - Oracle
   - PostgreSQL
+  - SQL
   outcomes_fr:
-  - Solution de paiement en production
-  - Responsabilité complète des backends
+  - Solution toujours en production aujourd'hui — différenciée des solutions 4x CB
+    standard par sa capacité de recouvrement fin en cas d'impayé
+  - Réponse à un enjeu concurrentiel direct sur le réseau concessionnaires
+  - Premier découpage front / back chez SFS — pattern réutilisé sur les chantiers
+    Java suivants
+  - Cadrage et stabilisation d'un besoin métier complexe (recouvrement, comptabilité)
+    sur la durée
   outcomes_en:
-  - Payment solution in production
-  - Full backend ownership
+  - Solution still live today — differentiated from off-the-shelf 4x card solutions
+    by its fine-grained collection capability on defaults
+  - Direct response to a competitive risk on the dealer network
+  - First front / back separation at SFS — pattern reused on subsequent Java initiatives
+  - Long-term framing and stabilization of a complex business need (collections, accounting)
   display: true
-- title_fr: Framework d'Industrialisation Ops
-  title_en: Ops Industrialization Framework
+- title_fr: Framework d'Industrialisation Ops & Strategy Version Control SFS
+  title_en: Ops Industrialization Framework & SFS Version Control Strategy
   company: Stellantis Financial Services
   period: 2002 - 2010
-  description_fr: 'Conception d''un framework d''industrialisation en Shell/Perl pour
-    accélérer les déploiements applicatifs. Mise en place de la stratégie de version
-    control.
-
-    '
-  description_en: 'Design of an industrialization framework in Shell/Perl to accelerate
-    application deployments. Version control strategy implementation.
-
-    '
+  description_fr: "Conception et delivery d'un framework d'industrialisation Shell\
+    \ / Perl déployé sur l'ensemble du périmètre SFS (alors PSA Finance) pour transformer\
+    \ l'efficacité opérationnelle, le time-to-market applicatif et la fiabilité des\
+    \ déploiements. Industrialisation des packagings, des releases et de la gouvernance\
+    \ des modifications.\n\n\nContributions principales :\n\n- Conception et développement\
+    \ du framework en binôme avec un autre intégrateur technique senior — cible :\
+    \ permettre l'onboarding et la mise en production d'une application en 1 semaine\
+    \ vs plusieurs mois auparavant.\n\n- Définition et déploiement de la stratégie\
+    \ Version Control SFS — premier passage à Git côté Intégration, outillage de\
+    \ packaging et de versioning, mise en place d'un comité d'approbation des modifications.\n\
+    \n- Intégration d'applications Java sur Unix / Linux et Windows sur l'ensemble\
+    \ du périmètre banque.\n\n- Participation active à l'évolution des architectures\
+    \ techniques de la banque.\n\n- Référent Intégration sur les audits réglementaires\
+    \ et bancaires (Banque Centrale, audits métier, ISO) — production de la documentation\
+    \ et réponse directe aux auditeurs sans perte de temps.\n\n- Formation et accompagnement\
+    \ des équipes Dev / Ops dans l'adoption du framework et des nouveaux standards.\n\
+    \n"
+  description_en: "Designed and delivered an Ops industrialization framework (Shell\
+    \ / Perl) rolled out across the entire SFS scope (then PSA Finance) to transform\
+    \ operational efficiency, application time-to-market and deployment reliability.\
+    \ Industrialized packaging, releases and change governance.\n\n\nKey contributions:\n\
+    \n- Designed and built the framework with another senior technical integrator\
+    \ — target: enable onboarding and production go-live of an application in 1 week\
+    \ vs several months before.\n\n- Defined and rolled out the SFS Version Control\
+    \ strategy — first Git adoption on the Integration side, packaging and versioning\
+    \ tooling, change approval committee setup.\n\n- Integrated Java applications\
+    \ on Unix / Linux and Windows across the full banking scope.\n\n- Actively contributed\
+    \ to the evolution of the bank's technical architecture.\n\n- Integration reference\
+    \ on regulatory and banking audits (Central Bank, business audits, ISO) — produced\
+    \ documentation and answered auditors directly with no friction.\n\n- Trained\
+    \ and coached Dev / Ops teams on the framework and the new standards.\n\n"
   technologies:
   - Shell
   - Perl
-  - Unix/Linux
+  - Java / JEE
+  - Unix / Linux
+  - Windows Server
+  - Git
   outcomes_fr:
-  - Accélération significative des déploiements
-  - Stratégie de version control adoptée par les équipes
+  - Framework adopté sur l'ensemble du périmètre SFS — encore en production aujourd'hui
+  - Onboarding et mise en production d'une nouvelle application réduits de plusieurs
+    mois à 1 semaine
+  - Stratégie Version Control SFS définie et institutionnalisée — comité d'approbation,
+    outillage et conventions adoptés banque-wide
+  - Référent technique sur les audits Banque Centrale, audits métier et ISO — réponses
+    auditeurs accélérées
   outcomes_en:
-  - Significant deployment acceleration
-  - Version control strategy adopted by teams
+  - Framework adopted across the full SFS scope — still in production today
+  - New application onboarding and go-live reduced from several months to 1 week
+  - SFS Version Control strategy defined and institutionalized — approval committee,
+    tooling and conventions adopted bank-wide
+  - Technical reference on Central Bank, business and ISO audits — accelerated auditor
+    responses
   display: true
