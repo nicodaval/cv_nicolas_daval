@@ -458,7 +458,7 @@ def draw_wrapped_text(c, text, x, y, max_width, font, size, color, leading=10):
 
 
 def build_pdf(lang):
-    """Build the PDF for a given language."""
+    """Build the beautiful two-column PDF for a given language."""
     profile = get_profile()
     experiences = get_experiences()
     skills = get_skills()
@@ -480,11 +480,214 @@ def build_pdf(lang):
     print(f"Generated: {output_path}")
 
 
+def build_ats_pdf(lang):
+    """Build a single-column, ATS-optimized PDF for a given language."""
+    profile = get_profile()
+    experiences = get_experiences()
+    skills = get_skills()
+    education = get_education()
+    interests_data = get_interests()
+
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    output_path = os.path.join(OUTPUT_DIR, f'cv-nicolas-daval-ats-{lang}.pdf')
+
+    headers = {
+        'fr': {
+            'summary': 'RÉSUMÉ PROFESSIONNEL',
+            'experience': 'EXPÉRIENCES PROFESSIONNELLES',
+            'skills': 'COMPÉTENCES TECHNIQUES',
+            'soft_skills': 'COMPÉTENCES TRANSVERSALES',
+            'education': 'FORMATION',
+            'training': 'FORMATIONS PROFESSIONNELLES',
+            'languages': 'LANGUES',
+        },
+        'en': {
+            'summary': 'PROFESSIONAL SUMMARY',
+            'experience': 'PROFESSIONAL EXPERIENCE',
+            'skills': 'TECHNICAL SKILLS',
+            'soft_skills': 'SOFT SKILLS',
+            'education': 'EDUCATION',
+            'training': 'PROFESSIONAL TRAINING',
+            'languages': 'LANGUAGES',
+        }
+    }
+    h = headers[lang]
+
+    c = canvas.Canvas(output_path, pagesize=A4)
+    margin_x = 20 * mm
+    max_w = PAGE_W - 2 * margin_x
+    y = PAGE_H - 20 * mm
+
+    # === HEADER (Name + Title + Contact) ===
+    c.setFont('Helvetica-Bold', 16)
+    c.setFillColor(MAIN_TEXT)
+    c.drawString(margin_x, y, profile['name'])
+    y -= 16
+
+    c.setFont('Helvetica', 11)
+    c.setFillColor(MAIN_ACCENT)
+    c.drawString(margin_x, y, profile['title'])
+    y -= 14
+
+    c.setFont('Helvetica', 8.5)
+    c.setFillColor(MAIN_SECONDARY)
+    contact = profile.get('contact', {})
+    contact_parts = [profile.get('location', '')]
+    if contact.get('email'):
+        contact_parts.append(contact['email'])
+    if contact.get('linkedin'):
+        contact_parts.append(contact['linkedin'].replace('https://', ''))
+    c.drawString(margin_x, y, ' | '.join(contact_parts))
+    y -= 12
+
+    # Separator
+    c.setStrokeColor(MAIN_ACCENT)
+    c.setLineWidth(1)
+    c.line(margin_x, y, PAGE_W - margin_x, y)
+    y -= 12
+
+    # === SUMMARY ===
+    y = draw_ats_section_header(c, h['summary'], margin_x, y)
+    summary = profile.get(f'summary_{lang}', '').strip()
+    if summary:
+        y = draw_wrapped_text(c, summary, margin_x, y, max_w, 'Helvetica', 9, MAIN_TEXT, leading=12)
+    y -= 8
+
+    # === SKILLS (keyword-dense block for ATS scoring) ===
+    y = draw_ats_section_header(c, h['skills'], margin_x, y)
+    for category in skills:
+        cat_name = localize(category, 'name', lang)
+        skill_names = ', '.join(s['name'] for s in category.get('skills', []))
+        text = f"{cat_name}: {skill_names}"
+        y = draw_wrapped_text(c, text, margin_x, y, max_w, 'Helvetica', 8.5, MAIN_TEXT, leading=11)
+        y -= 2
+    y -= 6
+
+    # === EXPERIENCE ===
+    y = draw_ats_section_header(c, h['experience'], margin_x, y)
+
+    for exp in experiences:
+        if y < 35 * mm:
+            c.showPage()
+            y = PAGE_H - 20 * mm
+
+        exp_title = localize(exp, 'title', lang)
+        company = exp.get('company', '')
+        start = exp.get('start', '')
+        end = exp.get('end', '')
+        if end == 'present':
+            end = 'Présent' if lang == 'fr' else 'Present'
+        period = f"{start} - {end}"
+
+        # Title line
+        c.setFont('Helvetica-Bold', 9.5)
+        c.setFillColor(MAIN_TEXT)
+        c.drawString(margin_x, y, exp_title)
+        c.setFont('Helvetica', 8)
+        c.setFillColor(MAIN_SECONDARY)
+        c.drawRightString(PAGE_W - margin_x, y, period)
+        y -= 11
+
+        # Company
+        c.setFont('Helvetica', 8.5)
+        c.setFillColor(MAIN_ACCENT)
+        c.drawString(margin_x, y, company)
+        y -= 11
+
+        # Bullets
+        descriptions = exp.get(f'description_{lang}', [])
+        c.setFillColor(MAIN_TEXT)
+        for desc in descriptions[:5]:
+            if y < 20 * mm:
+                break
+            y = draw_wrapped_text(c, f"• {desc}", margin_x + 3, y, max_w - 6, 'Helvetica', 8, MAIN_TEXT, leading=10)
+
+        # Technologies inline
+        techs = exp.get('technologies', [])
+        if techs:
+            tech_text = f"Technologies: {', '.join(techs)}"
+            y = draw_wrapped_text(c, tech_text, margin_x + 3, y, max_w - 6, 'Helvetica-Oblique', 7.5, MAIN_SECONDARY, leading=9)
+
+        y -= 6
+
+    # === EDUCATION ===
+    if y < 50 * mm:
+        c.showPage()
+        y = PAGE_H - 20 * mm
+
+    y = draw_ats_section_header(c, h['education'], margin_x, y)
+    for diploma in education['diplomas']:
+        diploma_title = localize(diploma, 'title', lang)
+        institution = diploma.get('institution') or ''
+        year = diploma.get('year', '')
+        c.setFont('Helvetica-Bold', 8.5)
+        c.setFillColor(MAIN_TEXT)
+        c.drawString(margin_x, y, diploma_title)
+        c.setFont('Helvetica', 8)
+        c.setFillColor(MAIN_SECONDARY)
+        c.drawRightString(PAGE_W - margin_x, y, str(year))
+        y -= 10
+        if institution:
+            c.drawString(margin_x + 2, y, institution)
+            y -= 10
+        y -= 3
+
+    # Training
+    if education['training']:
+        y -= 4
+        y = draw_ats_section_header(c, h['training'], margin_x, y)
+        for t in education['training']:
+            t_name = t.get('name', '')
+            provider = t.get('provider')
+            text = f"• {t_name}" + (f" ({provider})" if provider else "")
+            c.setFont('Helvetica', 8)
+            c.setFillColor(MAIN_TEXT)
+            c.drawString(margin_x, y, text)
+            y -= 10
+
+    # === SOFT SKILLS ===
+    if y > 35 * mm:
+        y -= 6
+        y = draw_ats_section_header(c, h['soft_skills'], margin_x, y)
+        for ss in interests_data.get('soft_skills', []):
+            name = localize(ss, 'name', lang)
+            detail = localize(ss, 'detail', lang)
+            text = f"• {name}: {detail}"
+            y = draw_wrapped_text(c, text, margin_x, y, max_w, 'Helvetica', 8, MAIN_TEXT, leading=10)
+
+    # === LANGUAGES ===
+    if y > 25 * mm:
+        y -= 6
+        y = draw_ats_section_header(c, h['languages'], margin_x, y)
+        for language in profile.get('languages', []):
+            c.setFont('Helvetica', 8.5)
+            c.setFillColor(MAIN_TEXT)
+            c.drawString(margin_x, y, f"• {language['name']} — {language['level']}")
+            y -= 10
+
+    c.save()
+    print(f"Generated: {output_path}")
+
+
+def draw_ats_section_header(c, text, x, y):
+    """Draw a simple section header for ATS version."""
+    c.setFont('Helvetica-Bold', 10)
+    c.setFillColor(MAIN_TEXT)
+    c.drawString(x, y, text)
+    y -= 3
+    c.setStrokeColor(HexColor('#cbd5e1'))
+    c.setLineWidth(0.5)
+    c.line(x, y, x + PAGE_W - 40 * mm, y)
+    y -= 10
+    return y
+
+
 def main():
     mode = "FULL (all entries)" if FULL_MODE else "PUBLIC (display: true only)"
     print(f"Generating PDFs in {mode} mode...")
     for lang in ['fr', 'en']:
         build_pdf(lang)
+        build_ats_pdf(lang)
 
 
 if __name__ == '__main__':

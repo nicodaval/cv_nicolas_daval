@@ -1,26 +1,18 @@
 # LinkedIn Profile Content
 
-> Pre-formatted content for LinkedIn sections. Copy-paste directly into your LinkedIn profile.
+> Pre-formatted content for LinkedIn sections. Generated from data/*.yml files.
 
 ---
 
 ## Headline
 
-Data Architect & Tech Lead | Snowflake | dbt | Airflow | AWS | Java/Spring | 22+ ans chez Stellantis Financial Services
+Data Architect & Tech Lead | Snowflake | dbt | Modélisation 3NF | Data Vault V2 | Airflow | Astronomer Cosmos | 22+ years at Stellantis Financial Services
 
 ---
 
 ## About
 
-Data Architect and Tech Lead with 22+ years of experience at Stellantis Financial Services, evolving from application integration through Java development, software architecture, and now data architecture.
-
-My current focus is designing and operating cloud data platforms — building on Snowflake/AWS, orchestrating with Airflow/Astronomer, transforming with dbt, and ensuring data quality with Elementary. I led the definition of the enterprise data platform serving European subsidiaries (DE, GB, ES, FR), including governance and privacy strategies.
-
-Before moving into data, I spent 15+ years in software engineering: Java Tech Lead, Software Architect, building microservices platforms, event-driven architectures (Kafka, RabbitMQ), and leading teams across multiple countries (France, Argentina, China, India).
-
-I'm known for my ability to simplify complex technical topics, manage crisis situations effectively, and deliver sensitive regulatory projects under pressure. I enjoy evangelizing data culture and mentoring teams.
-
-Based in Baume-les-Dames, France — open to hybrid/remote opportunities on the Bourg-en-Bresse–Lyon or Bourg-en-Bresse–Grenoble corridors.
+Data Architect and Tech Lead with 22+ years of experience at Stellantis Financial Services. Specialized in cloud data platform design (Snowflake, AWS, dbt, Airflow), software architecture (Java/Spring, microservices, event-driven) and international team leadership (France, Argentina, China, India). Known for ability to simplify complex technical topics, manage crisis situations, and deliver sensitive regulatory projects.
 
 ---
 
@@ -35,12 +27,7 @@ Based in Baume-les-Dames, France — open to hybrid/remote opportunities on the 
 - Specified the dbt framework for data transformation
 - Evangelized and promoted data culture across SFS
 - Managed inshore, nearshore and offshore development teams
-- Delivered critical projects in taskforce/war room mode using dbt and Snowflake
-- Defined enterprise reference data architectures
-- Defined the privacy strategy in Snowflake
-- Supported the Data Office on governance and privacy
-- International project ownership (DE, GB, ES, FR)
-- Technologies: Snowflake, AWS, dbt, Airflow, Astronomer Cosmos, DAG Factory, Elementary, Python, SQL
+- Technologies: Snowflake, AWS (S3, Glue), Python, dbt, Airflow, Astronomer Cosmos, DAG Factory, Elementary, SQL
 
 ### Software Architect & Innovation
 **Stellantis Financial Services**
@@ -48,11 +35,10 @@ Based in Baume-les-Dames, France — open to hybrid/remote opportunities on the 
 
 - First AI PoC with IBM Watson
 - Chatbot solution study and evaluation
-- MongoDB PoC and digital data platform implementation (MongoDB + Spring Boot API + Kafka/RabbitMQ ingestion)
+- Participant to Enterprise Business Model definition  (From Bian, Open Banking, sfs architecture referencial )
+- MongoDB PoC to production ready plateform and implementation of the digital data platform (MongoDB + Spring Boot API + Kafka/RabbitMQ ingestion)
 - Software architect on multiple topics — Mediation Layer for EKIP package (Line Data)
-- Refactoring and AWS migration of the MongoDB/API platform
-- Support on Hadoop/Spark Java platform
-- Technologies: Java, Spring Boot, Spring Cloud, MongoDB, Kafka, RabbitMQ, AWS, Docker, Hadoop, Spark
+- Technologies: Java, Spring Boot, Spring Cloud, MongoDB, Kafka, RabbitMQ, AWS, Docker, Hadoop, Spark, IBM Watson
 
 ### Java Tech Lead
 **Stellantis Financial Services**
@@ -60,7 +46,7 @@ Based in Baume-les-Dames, France — open to hybrid/remote opportunities on the 
 
 - Enterprise Java application development
 - Home-made Java ETL as batch mediation layer
-- Complete 4x interest-free payment solution (front & back office) in full Spring — backend lead
+- Complete 4x interest-free payment solution (front office and back office) in full Spring — backend lead
 - Development team management on Java and Data scope
 - Technologies: Java, Spring, Oracle, PostgreSQL, Shell, SQL
 
@@ -69,34 +55,61 @@ Based in Baume-les-Dames, France — open to hybrid/remote opportunities on the 
 2002 - 2010
 
 - Built an industrialization framework in Shell/Perl to accelerate deployments
-- Defined Version Control strategy for Integration/Ops tools
+- Defined the Version Control strategy for Integration/Ops tools
 - Java application integration on Unix/Linux and Windows
-- Active participation in technical architecture evolution
-- Regulatory audit participation
-- Team training and knowledge transfer
-- Technologies: Shell, Perl, Java, Unix/Linux
+- Active participation in the bank's technical architecture evolution
+- Participation in regulatory audits
+- Technologies: Shell, Perl, Java, Unix/Linux, Windows Server
+
+### Network Teacher (BTS level)
+**ICEP**
+2003 - 2003
+
+- Teaching computer networks at BTS level (2-year technical degree)
+- Technologies: 
+
+### Apprentice — GIS Laboratory
+**CNERTA Dijon**
+2001 - 2002
+
+- Geographic Information Systems laboratory using ESRI software
+- Development of an embedded tool for Windows Pocket PC
+- Technologies: PostgreSQL, Perl, ESRI (ArcGIS), Windows Mobile
+
+### Intern / Apprentice — Intranet
+**Établissements Schiever**
+2000 - 2001
+
+- Design and deployment of an intranet for stores to place orders and browse the product catalog
+- Technologies: Web development
+
 
 ---
 
 ## Skills
 
-Snowflake, dbt, Apache Airflow, Astronomer Cosmos, DAG Factory, Elementary, AWS (S3, Glue, DMS, API Gateway), Python, SQL, Java, Spring Boot, Spring Cloud, Kafka, RabbitMQ, MongoDB, Oracle, PostgreSQL, MySQL, Docker, Shell, Perl, REST API, Event-Driven Architecture, CQRS, Microservices, Data Governance, Privacy/GDPR, Data Quality, GenAI, MCP, YAML, Git, CI/CD, Agile/Scrum, Technical Leadership, International Team Management, Crisis Management
+Snowflake, dbt, Modélisation 3NF, Data Vault V2, Airflow, Astronomer Cosmos, DAG Factory, Elementary, AWS (S3, Glue, DMS, API Gateway), Python, SQL, Java / Spring / Spring Cloud, Architecture Event-Driven / CQRS, Kafka / RabbitMQ, MongoDB, Oracle / PostgreSQL / MySQL, Docker, Shell / Perl, API REST, Elementary (Data Quality), Data Governance, Privacy / RGPD, GenAI / MCP, Kiro (Steerings, Skills, Hooks, Requirements), YAML, Git / Version Control, CI/CD, TeamCity, Github Actions, Agile / Scrum
+
+---
+
+## Soft Skills
+
+- International team management: Teams distributed across multiple sites (France, Argentina, China, India)
+- Technical communication: Ability to simplify complex topics and get stakeholder buy-in
+- Crisis management: Strong in managing sensitive and urgent regulatory topics
+- Data evangelism: Promoting data culture and best practices within the organization
+- Banking framework expertise: BIAN framework and banking regulatory environment
 
 ---
 
 ## Education
 
-- Engineering Degree — CNAM (2006)
-- Master's in Computer Science — CNAM (2004)
-- CASIE — Enterprise IS Designer & Administrator (2002)
-- DUT in Computer Science (2000)
+- Engineering Degree (Master's equivalent) — UTBM (2006)
+- Master's Degree in Computer Science — CNAM (2004)
+- CASIE — Enterprise Information Systems Designer & Administrator — ICEP Dole (2002)
+- DUT in Computer Science (2-year technical degree) — IUT Dijon (2000)
+- Scientific Baccalaureate — Lycée d'Avallon(89) (1998)
 
 ## Training
 
-- AWS Solutions Architect
-- AWS DevOps
-- AWS Go Build Data & AI
-- Spring Framework
-- Oracle 9
-- Snowflake Starter Kit
-- MongoDB University — Java Developer Path
+- Snowflake Starter Kit (Snowflake)- MongoDB University — Parcours Développeur Java (MongoDB)- AWS Solutions Architect (AWS)- AWS DevOps (AWS)- AWS Go Build Data & IA (AWS)- Spring Framework (Orsys)- Angular (Orsys)- Oracle 9 (Oracle)

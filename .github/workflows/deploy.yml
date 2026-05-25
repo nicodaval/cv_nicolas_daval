@@ -42,6 +42,12 @@ jobs:
       - name: Generate PDFs
         run: python scripts/generate_pdf.py
 
+      - name: Generate cv.json
+        run: python scripts/generate_json.py
+
+      - name: Generate LinkedIn content
+        run: python scripts/generate_linkedin.py
+
       - name: Build Next.js
         run: npm run build
 
