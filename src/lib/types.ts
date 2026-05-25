@@ -12,6 +12,15 @@ export interface Profile {
   languages: { name: string; level: string }[];
   summary_fr: string;
   summary_en: string;
+  salary?: {
+    current: string;
+    target: string;
+  };
+  mobility?: {
+    type: string;
+    zones: string[];
+    note?: string;
+  };
 }
 
 export interface Experience {
@@ -30,7 +39,7 @@ export interface Experience {
 export interface SkillCategory {
   name_fr: string;
   name_en: string;
-  skills: { name: string; level: number }[];
+  skills: { name: string; level: string }[];
 }
 
 export interface Project {

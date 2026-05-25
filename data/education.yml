@@ -1,44 +1,52 @@
 diplomas:
-  - title_fr: Diplôme d'Ingénieur
-    title_en: Engineering Degree (Master's equivalent)
-    institution: UTBM
-    year: 2006
-
-  - title_fr: Maîtrise Informatique
-    title_en: Master's Degree in Computer Science
-    institution: CNAM
-    year: 2004
-
-  - title_fr: CASIE — Concepteur et Administrateur des Systèmes d'Information d'Entreprise
-    title_en: CASIE — Enterprise Information Systems Designer & Administrator
-    institution: ICEP Dole
-    year: 2002
-
-  - title_fr: DUT Informatique
-    title_en: DUT in Computer Science (2-year technical degree)
-    institution: IUT Dijon
-    year: 2000
-
-  - title_fr: Baccalauréat Scientifique (Bac S)
-    title_en: Scientific Baccalaureate
-    institution: Lycée d'Avallon(89)
-    year: 1998
-
+- title_fr: Diplôme d'Ingénieur
+  title_en: Engineering Degree (Master's equivalent)
+  institution: UTBM
+  year: 2006
+  display: true
+- title_fr: Maîtrise Informatique
+  title_en: Master's Degree in Computer Science
+  institution: CNAM
+  year: 2004
+  display: true
+- title_fr: CASIE — Concepteur et Administrateur des Systèmes d'Information d'Entreprise
+  title_en: CASIE — Enterprise Information Systems Designer & Administrator
+  institution: ICEP Dole
+  year: 2002
+  display: true
+- title_fr: DUT Informatique
+  title_en: DUT in Computer Science (2-year technical degree)
+  institution: IUT Dijon
+  year: 2000
+  display: true
+- title_fr: Baccalauréat Scientifique (Bac S)
+  title_en: Scientific Baccalaureate
+  institution: Lycée d'Avallon(89)
+  year: 1998
+  display: true
 training:
-  - name: AWS Solutions Architect
-    provider: AWS
-  - name: AWS DevOps
-    provider: AWS
-  - name: AWS Go Build Data & IA
-    provider: AWS
-  - name: Spring Framework
-    provider: null
-  - name: Oracle 9
-    provider: Oracle
-  - name: Snowflake Starter Kit
-    provider: Snowflake
-  - name: MongoDB University — Parcours Développeur Java
-    provider: MongoDB
-
+- name: Snowflake Starter Kit
+  provider: Snowflake
+  display: true
+- name: MongoDB University — Parcours Développeur Java
+  provider: MongoDB
+  display: true
+- name: AWS Solutions Architect
+  provider: AWS
+  display: true
+- name: AWS DevOps
+  provider: AWS
+  display: true
+- name: AWS Go Build Data & IA
+  provider: AWS
+  display: true
+- name: Spring Framework
+  provider: Orsys
+  display: true
+- name: Angular
+  provider: Orsys
+  display: true
+- name: Oracle 9
+  provider: Oracle
+  display: true
 certifications: []
-# Pas de certification officielle pour le moment

@@ -1,5 +1,6 @@
 import { Lang } from '@/lib/types';
 import { getLabels } from '@/lib/i18n';
+import Link from 'next/link';
 
 interface PdfDownloadButtonProps {
   lang: Lang;
@@ -9,10 +10,11 @@ export default function PdfDownloadButton({ lang }: PdfDownloadButtonProps) {
   const labels = getLabels(lang);
 
   return (
-    <a
-      href={`/cv_nicolas_daval/pdf/cv-nicolas-daval-${lang}.pdf`}
+    <Link
+      href={`/pdf/cv-nicolas-daval-${lang}.pdf`}
       className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-dark underline underline-offset-2 transition-colors"
       download
+      target="_blank"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +31,6 @@ export default function PdfDownloadButton({ lang }: PdfDownloadButtonProps) {
         />
       </svg>
       {labels.downloadPdf}
-    </a>
+    </Link>
   );
 }

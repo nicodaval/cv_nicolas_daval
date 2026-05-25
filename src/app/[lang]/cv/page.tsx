@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Lang } from '@/lib/types';
 import { getProfile, getExperiences, getSkills, getEducation, getInterests } from '@/lib/data';
 import { getLabels } from '@/lib/i18n';
+import ProfileSection from '@/components/cv/ProfileSection';
 import Timeline from '@/components/cv/Timeline';
 import SkillCategory from '@/components/cv/SkillCategory';
 import EducationCard from '@/components/cv/EducationCard';
@@ -52,6 +53,7 @@ export default async function CvPage({
   const labels = getLabels(typedLang);
 
   const tocSections = [
+    { id: 'profile', label: lang === 'fr' ? 'Profil' : 'Profile' },
     { id: 'experience', label: labels.experience },
     { id: 'skills', label: labels.skills },
     { id: 'education', label: labels.education },
@@ -65,12 +67,10 @@ export default async function CvPage({
       <TOCNavigation sections={tocSections} />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:ml-56">
-        {/* Page header */}
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold text-gray-900 mb-1">{profile.name}</h1>
-          <p className="text-lg text-primary mb-4">{profile.title}</p>
-          <PdfDownloadButton lang={typedLang} />
-        </div>
+        {/* Profile */}
+        <section id="profile">
+          <ProfileSection profile={profile} lang={typedLang} />
+        </section>
 
         {/* Experience */}
         <section id="experience" className="mb-12">

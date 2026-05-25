@@ -1,26 +1,30 @@
 soft_skills:
-  - name_fr: Encadrement d'équipes internationales
-    name_en: International team management
-    detail_fr: Équipes réparties sur plusieurs sites (France, Argentine, Chine, Inde)
-    detail_en: Teams distributed across multiple sites (France, Argentina, China, India)
-
-  - name_fr: Vulgarisation technique
-    name_en: Technical communication
-    detail_fr: Capacité à vulgariser les sujets complexes et faire adhérer les parties prenantes
-    detail_en: Ability to simplify complex topics and get stakeholder buy-in
-
-  - name_fr: Gestion de crise
-    name_en: Crisis management
-    detail_fr: Très bon dans la gestion de sujets sensibles et réglementaires urgents
-    detail_en: Strong in managing sensitive and urgent regulatory topics
-
-  - name_fr: Évangélisation data
-    name_en: Data evangelism
-    detail_fr: Promotion de la culture data et des bonnes pratiques au sein de l'organisation
-    detail_en: Promoting data culture and best practices within the organization
-
+- name_fr: Encadrement d'équipes internationales
+  name_en: International team management
+  detail_fr: Équipes réparties sur plusieurs sites (France, Argentine, Chine, Inde)
+  detail_en: Teams distributed across multiple sites (France, Argentina, China, India)
+  display: true
+- name_fr: Vulgarisation technique
+  name_en: Technical communication
+  detail_fr: Capacité à vulgariser les sujets complexes et faire adhérer les parties
+    prenantes
+  detail_en: Ability to simplify complex topics and get stakeholder buy-in
+  display: true
+- name_fr: Gestion de crise
+  name_en: Crisis management
+  detail_fr: Très bon dans la gestion de sujets sensibles et réglementaires urgents
+  detail_en: Strong in managing sensitive and urgent regulatory topics
+  display: true
+- name_fr: Évangélisation data
+  name_en: Data evangelism
+  detail_fr: Promotion de la culture data et des bonnes pratiques au sein de l'organisation
+  detail_en: Promoting data culture and best practices within the organization
+  display: true
 interests:
-  - name_fr: Badminton
-    name_en: Badminton
-    detail_fr: Membre du CA du Comité Départemental de Badminton du Doubs. Encadrant jeunes au club du Volant Bisontin.
-    detail_en: Board member of the Doubs Departmental Badminton Committee. Youth coach at Volant Bisontin club.
+- name_fr: Badminton
+  name_en: Badminton
+  detail_fr: Membre du CA du Comité Départemental de Badminton du Doubs. Encadrant
+    jeunes au club du Volant Bisontin.
+  detail_en: Board member of the Doubs Departmental Badminton Committee. Youth coach
+    at Volant Bisontin club.
+  display: true

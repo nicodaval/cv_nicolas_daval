@@ -48,7 +48,7 @@ export default async function LangPage({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pb-16">
         <Link
-          href={`/cv_nicolas_daval/${lang}/cv/`}
+          href={`/${lang}/cv/`}
           className="group block p-6 rounded-card bg-white shadow-card hover:shadow-card-hover transition-all duration-200 border border-gray-100"
         >
           <h2 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors mb-2">
@@ -62,7 +62,7 @@ export default async function LangPage({
         </Link>
 
         <Link
-          href={`/cv_nicolas_daval/${lang}/projects/`}
+          href={`/${lang}/projects/`}
           className="group block p-6 rounded-card bg-white shadow-card hover:shadow-card-hover transition-all duration-200 border border-gray-100"
         >
           <h2 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors mb-2">

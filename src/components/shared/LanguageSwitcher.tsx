@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Lang } from '@/lib/types';
 
 interface LanguageSwitcherProps {
@@ -9,20 +9,15 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
   const pathname = usePathname();
+  const router = useRouter();
 
   function switchLang(targetLang: Lang) {
     if (targetLang === lang) return;
 
-    // Remove basePath prefix if present, then swap language segment
-    const basePath = '/cv_nicolas_daval';
-    let path = pathname;
-    if (path.startsWith(basePath)) {
-      path = path.slice(basePath.length);
-    }
-
+    // pathname from usePathname() already excludes basePath in Next.js
     // Replace /fr/ or /en/ at the start with the target language
-    const newPath = path.replace(/^\/(fr|en)/, `/${targetLang}`);
-    window.location.href = `${basePath}${newPath}`;
+    const newPath = pathname.replace(/^\/(fr|en)/, `/${targetLang}`);
+    router.push(newPath);
   }
 
   return (

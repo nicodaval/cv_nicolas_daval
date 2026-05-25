@@ -17,11 +17,11 @@ languages:
   - name: Français
     level: Langue maternelle
   - name: Anglais
-    level: Professionnel (TOEIC 700)
+    level: Professionnel
 
 salary:
   current: "65K€ + variable + prime"
-  target: "85K€ — 100K€"
+  target: "85K€"
 
 summary_fr: >
   Architecte Data et Tech Lead avec plus de 22 ans d'expérience chez Stellantis Financial Services.

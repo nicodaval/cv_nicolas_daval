@@ -14,8 +14,8 @@ export default function Header({ lang }: HeaderProps) {
   const labels = getLabels(lang);
   const pathname = usePathname();
 
-  const cvHref = `/cv_nicolas_daval/${lang}/cv/`;
-  const projectsHref = `/cv_nicolas_daval/${lang}/projects/`;
+  const cvHref = `/${lang}/cv/`;
+  const projectsHref = `/${lang}/projects/`;
 
   const isCvActive = pathname.includes(`/${lang}/cv`);
   const isProjectsActive = pathname.includes(`/${lang}/projects`);
@@ -24,7 +24,7 @@ export default function Header({ lang }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
         <Link
-          href={`/cv_nicolas_daval/${lang}/`}
+          href={`/${lang}/`}
           className="text-lg font-bold tracking-tight hover:opacity-90 transition-opacity"
         >
           Nicolas DAVAL

@@ -1,128 +1,148 @@
 projects:
-  - title_fr: Migration Hadoop vers Dataplateforme New Gen
-    title_en: Hadoop to Next-Gen Data Platform Migration
-    company: Stellantis Financial Services
-    period: 2021 - présent
-    description_fr: >
-      Pilotage de la migration de la plateforme Hadoop legacy vers la dataplateforme
-      nouvelle génération (Snowflake). Analyse de l'existant, définition de la stratégie
-      de migration, spécifications techniques et choix de modélisation avec le partenaire.
-    description_en: >
-      Led the migration from the legacy Hadoop platform to the next-generation data platform
-      (Snowflake). Analyzed existing system, defined migration strategy, produced technical
-      specifications and modeling choices in collaboration with the partner.
-    technologies:
-      - Hadoop
-      - Spark
-      - Snowflake
-      - dbt
-      - Python
-      - AWS
-    outcomes_fr:
-      - Stratégie de migration définie et validée
-      - Spécifications techniques livrées
-      - Choix de modélisation arrêtés avec le partenaire
-    outcomes_en:
-      - Migration strategy defined and validated
-      - Technical specifications delivered
-      - Modeling choices finalized with partner
+- title_fr: Migration Hadoop vers Dataplateforme New Gen
+  title_en: Hadoop to Next-Gen Data Platform Migration
+  company: Stellantis Financial Services
+  period: 2021 - présent
+  description_fr: 'Pilotage technique de la migration de la plateforme Hadoop legacy
+    vers la dataplateforme nouvelle génération (Snowflake). Analyse de l''existant,
+    définition de la stratégie de migration, spécifications techniques et choix de
+    modélisation avec le partenaire.
 
-  - title_fr: Plateforme Data Snowflake sur AWS
-    title_en: Snowflake Data Platform on AWS
-    company: Stellantis Financial Services
-    period: 2021 - présent
-    description_fr: >
-      Définition et mise en œuvre de la plateforme data d'entreprise sur Snowflake/AWS.
-      Conception du framework EL (Extract-Load) et du framework dbt pour la transformation.
-      Orchestration via Airflow/Astronomer Cosmos. Gouvernance et privacy intégrées.
-    description_en: >
-      Design and implementation of the enterprise data platform on Snowflake/AWS.
-      EL (Extract-Load) framework and dbt transformation framework design.
-      Orchestration via Airflow/Astronomer Cosmos. Built-in governance and privacy.
-    technologies:
-      - Snowflake
-      - AWS S3
-      - AWS Glue
-      - dbt
-      - Airflow
-      - Astronomer Cosmos
-      - DAG Factory
-      - Elementary
-      - Python
-    outcomes_fr:
-      - Plateforme data unifiée pour les filiales européennes (DE, GB, ES, FR)
-      - Framework EL et dbt industrialisés
-      - Stratégie privacy définie et implémentée
-    outcomes_en:
-      - Unified data platform for European subsidiaries (DE, GB, ES, FR)
-      - Industrialized EL and dbt frameworks
-      - Privacy strategy defined and implemented
+    '
+  description_en: 'Led the migration from the legacy Hadoop platform to the next-generation
+    data platform (Snowflake). Analyzed existing system, defined migration strategy,
+    produced technical specifications and modeling choices in collaboration with the
+    partner.
 
-  - title_fr: Plateforme Digital MongoDB + API
-    title_en: Digital MongoDB + API Platform
-    company: Stellantis Financial Services
-    period: 2016 - 2021
-    description_fr: >
-      Conception et mise en place de la plateforme data digital : MongoDB + API Spring Boot
-      avec ingestion des données via Kafka et RabbitMQ. Migration ultérieure vers AWS.
-    description_en: >
-      Design and implementation of the digital data platform: MongoDB + Spring Boot API
-      with data ingestion via Kafka and RabbitMQ. Later migrated to AWS.
-    technologies:
-      - MongoDB
-      - Spring Boot
-      - Kafka
-      - RabbitMQ
-      - AWS
-      - Docker
-    outcomes_fr:
-      - Plateforme digitale opérationnelle
-      - Migration réussie vers AWS
-      - Architecture event-driven en production
-    outcomes_en:
-      - Operational digital platform
-      - Successful AWS migration
-      - Event-driven architecture in production
+    '
+  technologies:
+  - Hadoop
+  - Spark
+  - Snowflake
+  - dbt
+  - Python
+  - AWS
+  outcomes_fr:
+  - Stratégie de migration définie et validée
+  - Spécifications techniques livrées
+  - Choix de modélisation arrêtés avec le partenaire
+  outcomes_en:
+  - Migration strategy defined and validated
+  - Technical specifications delivered
+  - Modeling choices finalized with partner
+  display: true
+- title_fr: Plateforme Data Snowflake sur AWS
+  title_en: Snowflake Data Platform on AWS
+  company: Stellantis Financial Services
+  period: 2021 - présent
+  description_fr: 'Définition et mise en œuvre de la plateforme data d''entreprise
+    sur Snowflake/AWS. Conception et développement du framework EL (Extract-Load),
+    Dag Factory et du framework dbt pour la transformation. Conception et développement
+    d''un extracteur générique sur base python python et dlthub compatible snowflake/postgresql/duckDB
+    Orchestration via Airflow/Astronomer Cosmos. Gouvernance et privacy intégrées.
 
-  - title_fr: Solution Paiement 4x Sans Frais
-    title_en: 4x Interest-Free Payment Solution
-    company: Stellantis Financial Services
-    period: 2010 - 2016
-    description_fr: >
-      Solution complète de paiement en 4x sans frais couvrant les fonctions front office
-      et back office, développée en full Spring. Responsable des backends.
-    description_en: >
-      Complete 4x interest-free payment solution covering front office and back office
-      functions, developed in full Spring. Backend lead.
-    technologies:
-      - Java
-      - Spring
-      - Oracle
-      - PostgreSQL
-    outcomes_fr:
-      - Solution de paiement en production
-      - Responsabilité complète des backends
-    outcomes_en:
-      - Payment solution in production
-      - Full backend ownership
+    '
+  description_en: 'Design and implementation of the enterprise data platform on Snowflake/AWS.
+    Design and implementation of EL (Extract-Load) framework and dbt transformation
+    framework. Design and impplement Generic extractor tools with python dlthub, compatible
+    with snowflake/postgresql/duckDB. Orchestration via Airflow/Astronomer Cosmos.
+    Built-in governance and privacy.
 
-  - title_fr: Framework d'Industrialisation Ops
-    title_en: Ops Industrialization Framework
-    company: Stellantis Financial Services
-    period: 2002 - 2010
-    description_fr: >
-      Conception d'un framework d'industrialisation en Shell/Perl pour accélérer les
-      déploiements applicatifs. Mise en place de la stratégie de version control.
-    description_en: >
-      Design of an industrialization framework in Shell/Perl to accelerate application
-      deployments. Version control strategy implementation.
-    technologies:
-      - Shell
-      - Perl
-      - Unix/Linux
-    outcomes_fr:
-      - Accélération significative des déploiements
-      - Stratégie de version control adoptée par les équipes
-    outcomes_en:
-      - Significant deployment acceleration
-      - Version control strategy adopted by teams
+    '
+  technologies:
+  - Snowflake
+  - AWS S3
+  - AWS Glue
+  - dbt
+  - Airflow
+  - Astronomer Cosmos
+  - DAG Factory
+  - Elementary
+  - Python
+  outcomes_fr:
+  - Plateforme data unifiée pour les filiales européennes (DE, GB, ES, FR)
+  - Framework EL et dbt industrialisés
+  - Stratégie privacy définie et implémentée
+  outcomes_en:
+  - Unified data platform for European subsidiaries (DE, GB, ES, FR)
+  - Industrialized EL and dbt frameworks
+  - Privacy strategy defined and implemented
+  display: true
+- title_fr: Plateforme Digital MongoDB + API
+  title_en: Digital MongoDB + API Platform
+  company: Stellantis Financial Services
+  period: 2016 - 2021
+  description_fr: 'Conception et mise en place de la plateforme data digital : MongoDB
+    + API Spring Boot avec ingestion des données via Kafka et RabbitMQ. Migration
+    ultérieure vers AWS.
+
+    '
+  description_en: 'Design and implementation of the digital data platform: MongoDB
+    + Spring Boot API with data ingestion via Kafka and RabbitMQ. Later migrated to
+    AWS.
+
+    '
+  technologies:
+  - MongoDB
+  - Spring Boot
+  - Kafka
+  - RabbitMQ
+  - AWS
+  - Docker
+  outcomes_fr:
+  - Plateforme digitale opérationnelle
+  - Migration réussie vers AWS
+  - Architecture event-driven en production
+  outcomes_en:
+  - Operational digital platform
+  - Successful AWS migration
+  - Event-driven architecture in production
+  display: true
+- title_fr: Solution Paiement 4x Sans Frais
+  title_en: 4x Interest-Free Payment Solution
+  company: Stellantis Financial Services
+  period: 2010 - 2016
+  description_fr: 'Solution complète de paiement en 4x sans frais couvrant les fonctions
+    front office et back office, développée en full Spring. Responsable des backends.
+
+    '
+  description_en: 'Complete 4x interest-free payment solution covering front office
+    and back office functions, developed in full Spring. Backend lead.
+
+    '
+  technologies:
+  - Java
+  - Spring
+  - Oracle
+  - PostgreSQL
+  outcomes_fr:
+  - Solution de paiement en production
+  - Responsabilité complète des backends
+  outcomes_en:
+  - Payment solution in production
+  - Full backend ownership
+  display: true
+- title_fr: Framework d'Industrialisation Ops
+  title_en: Ops Industrialization Framework
+  company: Stellantis Financial Services
+  period: 2002 - 2010
+  description_fr: 'Conception d''un framework d''industrialisation en Shell/Perl pour
+    accélérer les déploiements applicatifs. Mise en place de la stratégie de version
+    control.
+
+    '
+  description_en: 'Design of an industrialization framework in Shell/Perl to accelerate
+    application deployments. Version control strategy implementation.
+
+    '
+  technologies:
+  - Shell
+  - Perl
+  - Unix/Linux
+  outcomes_fr:
+  - Accélération significative des déploiements
+  - Stratégie de version control adoptée par les équipes
+  outcomes_en:
+  - Significant deployment acceleration
+  - Version control strategy adopted by teams
+  display: true

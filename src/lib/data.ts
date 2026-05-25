@@ -22,12 +22,12 @@ function readYaml<T>(filename: string): T {
 }
 
 /**
- * Filters entries by published flag.
- * Entries with published: false are excluded.
- * Entries with published: true or no published field are included.
+ * Filters entries by display flag.
+ * Entries with display: false are excluded from the public site.
+ * Entries with display: true or no display field are included.
  */
-function filterPublished<T extends { published?: boolean }>(entries: T[]): T[] {
-  return entries.filter((entry) => entry.published !== false);
+function filterDisplay<T>(entries: T[]): T[] {
+  return entries.filter((entry) => (entry as unknown as { display?: boolean }).display !== false);
 }
 
 /**
@@ -38,63 +38,60 @@ export function localize<T>(obj: T, field: string, lang: Lang): string {
 }
 
 /**
- * Get profile data, stripping private fields (salary, mobility).
+ * Get profile data.
  */
 export function getProfile(): Profile {
   const raw = readYaml<Record<string, unknown>>('profile.yml');
-
-  // Destructure to omit salary and mobility
-  const { salary, mobility, ...publicData } = raw;
-
-  // Suppress unused variable warnings
-  void salary;
-  void mobility;
-
-  return publicData as unknown as Profile;
+  return raw as unknown as Profile;
 }
 
 /**
- * Get experiences filtered by published flag.
+ * Get experiences filtered by display flag.
  */
 export function getExperiences(): Experience[] {
   const raw = readYaml<{ experiences: Experience[] }>('experiences.yml');
-  return filterPublished(raw.experiences);
+  return filterDisplay(raw.experiences);
 }
 
 /**
- * Get skill categories.
+ * Get skill categories (filter individual skills by display flag).
  */
 export function getSkills(): SkillCategory[] {
   const raw = readYaml<{ categories: SkillCategory[] }>('skills.yml');
-  return raw.categories;
+  return raw.categories
+    .filter((cat) => (cat as unknown as { display?: boolean }).display !== false)
+    .map((cat) => ({
+      ...cat,
+      skills: cat.skills.filter((s) => (s as unknown as { display?: boolean }).display !== false),
+    }));
 }
 
 /**
- * Get projects filtered by published flag.
+ * Get projects filtered by display flag.
  */
 export function getProjects(): Project[] {
   const raw = readYaml<{ projects: Project[] }>('projects.yml');
-  return filterPublished(raw.projects);
+  return filterDisplay(raw.projects);
 }
 
 /**
- * Get education data (diplomas and training) filtered by published flag.
+ * Get education data (diplomas and training) filtered by display flag.
  */
 export function getEducation(): { diplomas: Diploma[]; training: Training[] } {
   const raw = readYaml<{ diplomas: Diploma[]; training: Training[] }>('education.yml');
   return {
-    diplomas: filterPublished(raw.diplomas),
-    training: filterPublished(raw.training),
+    diplomas: filterDisplay(raw.diplomas),
+    training: filterDisplay(raw.training),
   };
 }
 
 /**
- * Get interests data (soft skills and interests).
+ * Get interests data (soft skills and interests) filtered by display flag.
  */
 export function getInterests(): { softSkills: SoftSkill[]; interests: Interest[] } {
   const raw = readYaml<{ soft_skills: SoftSkill[]; interests: Interest[] }>('interests.yml');
   return {
-    softSkills: raw.soft_skills,
-    interests: raw.interests,
+    softSkills: (raw.soft_skills || []).filter((s) => (s as unknown as { display?: boolean }).display !== false),
+    interests: (raw.interests || []).filter((i) => (i as unknown as { display?: boolean }).display !== false),
   };
 }

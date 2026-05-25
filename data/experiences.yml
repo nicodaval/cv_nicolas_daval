@@ -1,168 +1,178 @@
 experiences:
-  - title_fr: Tech Lead Data / Architecte Data
-    title_en: Data Tech Lead / Data Architect
-    company: Stellantis Financial Services
-    location: France
-    start: 2021
-    end: present
-    description_fr:
-      - Définition et mise en œuvre de la plateforme Snowflake sur AWS
-      - Spécification et développement du framework EL (S3, Glue, Python, Airflow, Snowflake)
-      - Spécification du framework dbt pour la transformation des données
-      - Vulgarisation et évangélisation de la culture data chez SFS
-      - Encadrement de développeurs inshore, nearshore et offshore
-      - Réalisation de projets critiques en taskforce/war room via dbt et Snowflake
-      - Définition d'architectures pour des référentiels d'entreprise
-      - Définition de la stratégie de privacy dans Snowflake
-      - Assistance au Data Office pour la gouvernance et la privacy
-      - Maîtrise d'ouvrage internationales (DE, GB, ES, FR)
-    description_en:
-      - Designed and implemented the Snowflake data platform on AWS
-      - Specified and developed the EL framework (S3, Glue, Python, Airflow, Snowflake)
-      - Specified the dbt framework for data transformation
-      - Evangelized and promoted data culture across SFS
-      - Managed inshore, nearshore and offshore development teams
-      - Delivered critical projects in taskforce/war room mode using dbt and Snowflake
-      - Defined enterprise reference data architectures
-      - Defined the privacy strategy in Snowflake
-      - Supported the Data Office on governance and privacy
-      - International project ownership (DE, GB, ES, FR)
-    technologies:
-      - Snowflake
-      - AWS (S3, Glue)
-      - Python
-      - dbt
-      - Airflow
-      - Astronomer Cosmos
-      - DAG Factory
-      - Elementary
-      - SQL
-
-  - title_fr: Software Architect & Innovation
-    title_en: Software Architect & Innovation
-    company: Stellantis Financial Services
-    location: France
-    start: 2016
-    end: 2021
-    description_fr:
-      - Premier PoC IA avec IBM Watson
-      - Étude de solutions d'agent conversationnel (chatbot)
-      - PoC MongoDB et mise en place de la plateforme data digital (MongoDB + API Spring Boot + ingestion Kafka/RabbitMQ)
-      - Architecte software sur de nombreux sujets — Médiation Layer progiciel EKIP (Line Data)
-      - Refactoring et migration AWS de la plateforme MongoDB/API de SFS
-      - Support sur la plateforme Hadoop/Spark Java
-      - Support aux équipes Spring Java
-    description_en:
-      - First AI PoC with IBM Watson
-      - Chatbot solution study and evaluation
-      - MongoDB PoC and implementation of the digital data platform (MongoDB + Spring Boot API + Kafka/RabbitMQ ingestion)
-      - Software architect on multiple topics — Mediation Layer for EKIP package (Line Data)
-      - Refactoring and AWS migration of the SFS MongoDB/API platform
-      - Support on the Hadoop/Spark Java platform
-      - Support for Spring Java teams
-    technologies:
-      - Java
-      - Spring Boot
-      - Spring Cloud
-      - MongoDB
-      - Kafka
-      - RabbitMQ
-      - AWS
-      - Docker
-      - Hadoop
-      - Spark
-      - IBM Watson
-
-  - title_fr: Tech Lead Java
-    title_en: Java Tech Lead
-    company: Stellantis Financial Services
-    location: France
-    start: 2010
-    end: 2016
-    description_fr:
-      - Développement d'applications Java d'entreprise
-      - ETL home-made en Java en guise de médiation layer batch
-      - Solution complète de paiement en 4x sans frais (front office et back office) en full Spring — responsable des backends
-      - Encadrement d'équipes de développement sur périmètre Java et Data
-    description_en:
-      - Enterprise Java application development
-      - Home-made Java ETL as batch mediation layer
-      - Complete 4x interest-free payment solution (front office and back office) in full Spring — backend lead
-      - Development team management on Java and Data scope
-    technologies:
-      - Java
-      - Spring
-      - Oracle
-      - PostgreSQL
-      - Shell
-      - SQL
-
-  - title_fr: Intégrateur d'Applications
-    title_en: Application Integrator
-    company: Stellantis Financial Services
-    location: France
-    start: 2002
-    end: 2010
-    description_fr:
-      - Mise en place d'un framework d'industrialisation en Shell/Perl pour accélérer les déploiements
-      - Mise en place de la stratégie de Version Control des outils Intégration/Ops
-      - Intégration d'applications Java sur Unix/Linux et Windows
-      - Participation active aux évolutions des architectures techniques de la banque
-      - Participation aux audits réglementaires
-      - Formation des équipes
-    description_en:
-      - Built an industrialization framework in Shell/Perl to accelerate deployments
-      - Defined the Version Control strategy for Integration/Ops tools
-      - Java application integration on Unix/Linux and Windows
-      - Active participation in the bank's technical architecture evolution
-      - Participation in regulatory audits
-      - Team training and knowledge transfer
-    technologies:
-      - Shell
-      - Perl
-      - Java
-      - Unix/Linux
-      - Windows Server
-
-  - title_fr: Professeur "Réseaux" en BTS
-    title_en: Network Teacher (BTS level)
-    company: Éducation Nationale
-    location: France
-    start: 2003
-    end: 2003
-    description_fr:
-      - Enseignement des réseaux informatiques en BTS
-    description_en:
-      - Teaching computer networks at BTS level (2-year technical degree)
-    technologies: []
-
-  - title_fr: Alternant — Laboratoire SIG
-    title_en: Apprentice — GIS Laboratory
-    company: CNERTA Dijon
-    location: Dijon, France
-    start: 2001
-    end: 2002
-    description_fr:
-      - Laboratoire de Systèmes d'Information Géographiques autour des logiciels ESRI
-      - Développement d'un outil embarqué pour Pocket PC Windows
-    description_en:
-      - Geographic Information Systems laboratory using ESRI software
-      - Development of an embedded tool for Windows Pocket PC
-    technologies:
-      - PostgreSQL
-      - Perl
-      - ESRI (ArcGIS)
-      - Windows Mobile
-
-  - title_fr: Stagiaire / Alternant — Intranet
-    title_en: Intern / Apprentice — Intranet
-    company: Établissements Schiever
-    location: Avallon, France
-    start: 2000
-    end: 2001
-    description_fr:
-      - Conception et déploiement d'un intranet à destination des magasins pour passer commandes et consulter le catalogue produit
-    description_en:
-      - Design and deployment of an intranet for stores to place orders and browse the product catalog
-    technologies:
-      - Web development
+- display: true
+  title_fr: Tech Lead Data / Architecte Data
+  title_en: Data Tech Lead / Data Architect
+  company: Stellantis Financial Services
+  location: France
+  start: 2021
+  end: present
+  description_fr:
+  - Définition et mise en œuvre de la plateforme Snowflake sur AWS
+  - Spécification et développement du framework EL (S3, Glue, Python, Airflow, Snowflake)
+  - Spécification du framework dbt pour la transformation des données
+  - Vulgarisation et évangélisation de la culture data chez SFS
+  - Encadrement de développeurs inshore, nearshore et offshore
+  - Réalisation de projets critiques en taskforce/war room via dbt et Snowflake
+  - Définition d'architectures pour des référentiels d'entreprise
+  - Définition de la stratégie de privacy dans Snowflake
+  - Assistance au Data Office pour la gouvernance et la privacy
+  - Maîtrise d'ouvrage internationales (DE, GB, ES, FR)
+  description_en:
+  - Designed and implemented the Snowflake data platform on AWS
+  - Specified and developed the EL framework (S3, Glue, Python, Airflow, Snowflake)
+  - Specified the dbt framework for data transformation
+  - Evangelized and promoted data culture across SFS
+  - Managed inshore, nearshore and offshore development teams
+  - Delivered critical projects in taskforce/war room mode using dbt and Snowflake
+  - Defined enterprise reference data architectures
+  - Defined the privacy strategy in Snowflake
+  - Supported the Data Office on governance and privacy
+  - International project ownership (DE, GB, ES, FR)
+  technologies:
+  - Snowflake
+  - AWS (S3, Glue)
+  - Python
+  - dbt
+  - Airflow
+  - Astronomer Cosmos
+  - DAG Factory
+  - Elementary
+  - SQL
+- title_fr: Software Architect & Innovation
+  title_en: Software Architect & Innovation
+  company: Stellantis Financial Services
+  location: France
+  start: 2016
+  end: 2021
+  description_fr:
+  - Premier PoC IA avec IBM Watson
+  - Étude de solutions d'agent conversationnel (chatbot)
+  - PoC MongoDB et mise en place de la plateforme data digital (MongoDB + API Spring
+    Boot + ingestion Kafka/RabbitMQ)
+  - Architecte software sur de nombreux sujets — Médiation Layer progiciel EKIP (Line
+    Data)
+  - Refactoring et migration AWS de la plateforme MongoDB/API de SFS
+  - Support sur la plateforme Hadoop/Spark Java
+  - Support aux équipes Spring Java
+  description_en:
+  - First AI PoC with IBM Watson
+  - Chatbot solution study and evaluation
+  - MongoDB PoC and implementation of the digital data platform (MongoDB + Spring
+    Boot API + Kafka/RabbitMQ ingestion)
+  - Software architect on multiple topics — Mediation Layer for EKIP package (Line
+    Data)
+  - Refactoring and AWS migration of the SFS MongoDB/API platform
+  - Support on the Hadoop/Spark Java platform
+  - Support for Spring Java teams
+  technologies:
+  - Java
+  - Spring Boot
+  - Spring Cloud
+  - MongoDB
+  - Kafka
+  - RabbitMQ
+  - AWS
+  - Docker
+  - Hadoop
+  - Spark
+  - IBM Watson
+  display: true
+- title_fr: Tech Lead Java
+  title_en: Java Tech Lead
+  company: Stellantis Financial Services
+  location: France
+  start: 2010
+  end: 2016
+  description_fr:
+  - Développement d'applications Java d'entreprise
+  - ETL home-made en Java en guise de médiation layer batch
+  - Solution complète de paiement en 4x sans frais (front office et back office) en
+    full Spring — responsable des backends
+  - Encadrement d'équipes de développement sur périmètre Java et Data
+  description_en:
+  - Enterprise Java application development
+  - Home-made Java ETL as batch mediation layer
+  - Complete 4x interest-free payment solution (front office and back office) in full
+    Spring — backend lead
+  - Development team management on Java and Data scope
+  technologies:
+  - Java
+  - Spring
+  - Oracle
+  - PostgreSQL
+  - Shell
+  - SQL
+  display: true
+- title_fr: Intégrateur d'Applications
+  title_en: Application Integrator
+  company: Stellantis Financial Services
+  location: France
+  start: 2002
+  end: 2010
+  description_fr:
+  - Mise en place d'un framework d'industrialisation en Shell/Perl pour accélérer
+    les déploiements
+  - Mise en place de la stratégie de Version Control des outils Intégration/Ops
+  - Intégration d'applications Java sur Unix/Linux et Windows
+  - Participation active aux évolutions des architectures techniques de la banque
+  - Participation aux audits réglementaires
+  - Formation des équipes
+  description_en:
+  - Built an industrialization framework in Shell/Perl to accelerate deployments
+  - Defined the Version Control strategy for Integration/Ops tools
+  - Java application integration on Unix/Linux and Windows
+  - Active participation in the bank's technical architecture evolution
+  - Participation in regulatory audits
+  - Team training and knowledge transfer
+  technologies:
+  - Shell
+  - Perl
+  - Java
+  - Unix/Linux
+  - Windows Server
+  display: true
+- title_fr: Formateur "Réseaux" en BTS
+  title_en: Network Teacher (BTS level)
+  company: ICEP
+  location: France
+  start: 2003
+  end: 2003
+  description_fr:
+  - Enseignement des réseaux informatiques en BTS
+  description_en:
+  - Teaching computer networks at BTS level (2-year technical degree)
+  technologies: []
+  display: true
+- title_fr: Alternant — Laboratoire SIG
+  title_en: Apprentice — GIS Laboratory
+  company: CNERTA Dijon
+  location: Dijon, France
+  start: 2001
+  end: 2002
+  description_fr:
+  - Laboratoire de Systèmes d'Information Géographiques autour des logiciels ESRI
+  - Développement d'un outil embarqué pour Pocket PC Windows
+  description_en:
+  - Geographic Information Systems laboratory using ESRI software
+  - Development of an embedded tool for Windows Pocket PC
+  technologies:
+  - PostgreSQL
+  - Perl
+  - ESRI (ArcGIS)
+  - Windows Mobile
+  display: true
+- title_fr: Stagiaire / Alternant — Intranet
+  title_en: Intern / Apprentice — Intranet
+  company: Établissements Schiever
+  location: Avallon, France
+  start: 2000
+  end: 2001
+  description_fr:
+  - Conception et déploiement d'un intranet à destination des magasins pour passer
+    commandes et consulter le catalogue produit
+  description_en:
+  - Design and deployment of an intranet for stores to place orders and browse the
+    product catalog
+  technologies:
+  - Web development
+  display: true
