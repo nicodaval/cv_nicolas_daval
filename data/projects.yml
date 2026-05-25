@@ -1,72 +1,131 @@
 projects:
-- title_fr: Migration Hadoop vers Dataplateforme New Gen
-  title_en: Hadoop to Next-Gen Data Platform Migration
+- title_fr: Migration legacy Hadoop vers Data Platform New Gen
+  title_en: Legacy Hadoop to Next-Gen Data Platform Migration
   company: Stellantis Financial Services
   period: 2021 - présent
-  description_fr: 'Pilotage technique de la migration de la plateforme Hadoop legacy
-    vers la dataplateforme nouvelle génération (Snowflake). Analyse de l''existant,
-    définition de la stratégie de migration, spécifications techniques et choix de
-    modélisation avec le partenaire.
+  description_fr: 'Co-pilotage de la stratégie de transformation du patrimoine décisionnel
+    legacy (Hadoop, Oracle) vers la dataplateforme nouvelle génération Snowflake/AWS,
+    dans le cadre de la stratégie data citizen et IA du groupe. Cartographie de l''existant,
+    arbitrages d''architecture cible, définition de la trajectoire de migration et
+    coordination avec le partenaire intégrateur sur les choix de modélisation.
 
     '
-  description_en: 'Led the migration from the legacy Hadoop platform to the next-generation
-    data platform (Snowflake). Analyzed existing system, defined migration strategy,
-    produced technical specifications and modeling choices in collaboration with the
-    partner.
+  description_en: 'Co-led the transformation strategy of the legacy decision-support
+    estate (Hadoop, Oracle) toward the next-generation Snowflake/AWS data platform,
+    aligned with the group''s data citizen and AI strategy. Legacy mapping, target
+    architecture trade-offs, migration roadmap definition and modeling alignment with
+    the integration partner.
 
     '
   technologies:
   - Hadoop
+  - Oracle
   - Spark
   - Snowflake
   - dbt
   - Python
   - AWS
   outcomes_fr:
-  - Stratégie de migration définie et validée
-  - Spécifications techniques livrées
-  - Choix de modélisation arrêtés avec le partenaire
+  - Stratégie de migration définie et validée avec la DSI et le Chief Data Officer
+  - Rationalisation du patrimoine data legacy et alignement sur la cible groupe
+  - Choix de modélisation arrêtés conjointement avec le partenaire d'intégration
   outcomes_en:
-  - Migration strategy defined and validated
-  - Technical specifications delivered
-  - Modeling choices finalized with partner
+  - Migration strategy validated with CIO and Chief Data Officer
+  - Legacy data estate rationalization aligned with group target
+  - Modeling decisions finalized jointly with the integration partner
   display: true
-- title_fr: Plateforme Data Snowflake sur AWS
-  title_en: Snowflake Data Platform on AWS
+- title_fr: Plateforme Data Enterprise Snowflake / AWS — Programme de transformation
+    multi-pays
+  title_en: Enterprise Snowflake / AWS Data Platform — Multi-Country Transformation
+    Program
   company: Stellantis Financial Services
   period: 2021 - présent
-  description_fr: 'Définition et mise en œuvre de la plateforme data d''entreprise
-    sur Snowflake/AWS. Conception et développement du framework EL (Extract-Load),
-    Dag Factory et du framework dbt pour la transformation. Conception et développement
-    d''un extracteur générique sur base python python et dlthub compatible snowflake/postgresql/duckDB
-    Orchestration via Airflow/Astronomer Cosmos. Gouvernance et privacy intégrées.
-
-    '
-  description_en: 'Design and implementation of the enterprise data platform on Snowflake/AWS.
-    Design and implementation of EL (Extract-Load) framework and dbt transformation
-    framework. Design and impplement Generic extractor tools with python dlthub, compatible
-    with snowflake/postgresql/duckDB. Orchestration via Airflow/Astronomer Cosmos.
-    Built-in governance and privacy.
-
-    '
+  description_fr: "Programme de transformation plateforme data servant 8 pays européens,\
+    \ adossé à la stratégie data citizen et IA du groupe. Sponsorship DSI + Chief\
+    \ Data Officer. Périmètre : équipe plateforme d'environ 20 personnes (EL, transformation,\
+    \ réactivité, visualisation), une douzaine de développeurs data, Data Office central\
+    \ + équipes métier de chaque pays.\n\n\nContributions principales :\n\n- Définition\
+    \ de l'architecture cible avec les architectes — RBAC Snowflake, choix MWAA pour\
+    \ Airflow, plateforme EL sur AWS Glue, modélisation 3NF en Silver puis Data Products\
+    \ en Gold, introduction des data contracts.\n\n- Conception et industrialisation\
+    \ du framework EL (S3, Glue, Python, Airflow, Snowflake) — onboarding d'un flux\
+    \ Bronze passé d'un développement manuel à 1,5 jour, objectif x4 sur le delivery.\n\
+    \n- Conception d'un extracteur générique entreprise/bank-grade (Python + dlthub,\
+    \ compatible Snowflake / PostgreSQL / DuckDB) distribué aux applications sources\
+    \ pour normaliser et fiabiliser l'ingestion.\n\n- Définition des standards SFS\
+    \ Banque (privacy, gouvernance, conventions, qualité) co-construits avec l'architecte\
+    \ et le Data Platform Manager — adoptés sur 100+ sources par pays.\n\n- Arbitrages\
+    \ d'architecture portés et défendus, dont l'abandon imposé d'un pull DB cross-account\
+    \ Glue ne respectant pas les patterns d'intégration entreprise.\n\n- Encadrement\
+    \ et accompagnement de développeurs inshore, nearshore et offshore — onboarding\
+    \ en 1 semaine sur la crise UK.\n\n- Réalisation de projets critiques en taskforce\
+    \ / war room, fortement assistés par GenAI et Kiro pour la réactivité.\n\n- Maîtrise\
+    \ d'ouvrage internationale (DE, GB, ES, FR + 4 autres pays), interface entre Data\
+    \ Office, métiers pays et équipes techniques.\n\n"
+  description_en: "Enterprise data platform transformation program serving 8 European\
+    \ countries, aligned with the group's data citizen and AI strategy. CIO + Chief\
+    \ Data Officer sponsorship. Scope: ~20-person platform team (EL, transformation,\
+    \ reactivity, viz), a dozen data engineers, central Data Office plus per-country\
+    \ business teams.\n\n\nKey contributions:\n\n- Defined target architecture with\
+    \ architects — Snowflake RBAC, MWAA-based Airflow, AWS Glue EL platform, 3NF Silver\
+    \ modeling and Gold-layer Data Products, data contracts introduction.\n\n- Designed\
+    \ and industrialized the EL framework (S3, Glue, Python, Airflow, Snowflake) —\
+    \ Bronze flow onboarding from full manual build to 1.5 days, x4 target on overall\
+    \ delivery.\n\n- Designed a generic enterprise/bank-grade extractor (Python +\
+    \ dlthub, compatible with Snowflake / PostgreSQL / DuckDB) distributed to source\
+    \ applications to normalize and harden ingestion.\n\n- Defined SFS Banking standards\
+    \ (privacy, governance, conventions, quality) co-built with the architect and\
+    \ Data Platform Manager — adopted on 100+ sources per country.\n\n- Owned and\
+    \ defended architectural arbitrations, including enforcing the removal of a cross-account\
+    \ Glue DB pull that breached enterprise integration patterns.\n\n- Coached inshore,\
+    \ nearshore and offshore engineers — 1-week onboarding during the UK crisis.\n\
+    \n- Delivered critical projects in taskforce / war room mode, strongly assisted\
+    \ by GenAI and Kiro for speed.\n\n- International business ownership (DE, GB,\
+    \ ES, FR plus 4 other countries), bridging Data Office, country business teams\
+    \ and technical squads.\n\n"
   technologies:
   - Snowflake
-  - AWS S3
-  - AWS Glue
+  - AWS (S3, Glue, MWAA)
   - dbt
   - Airflow
   - Astronomer Cosmos
   - DAG Factory
   - Elementary
   - Python
+  - dlthub
+  - Modélisation 3NF / Data Vault
+  - Data contracts
+  - GenAI / Kiro
   outcomes_fr:
-  - Plateforme data unifiée pour les filiales européennes (DE, GB, ES, FR)
-  - Framework EL et dbt industrialisés
-  - Stratégie privacy définie et implémentée
+  - Plateforme data servant 8 pays européens — Data Office central, équipes métier
+    par pays, multi-équipes plateforme (EL, transfo, réactivité, viz)
+  - Framework EL industrialisé adopté sur 100+ sources par pays — Bronze onboarding
+    réduit à 1,5 jour (objectif x4 en time-to-market)
+  - Crise réglementaire UK (commissions) — premier MCP livré en 2 semaines, itérations
+    métier en moins de 5 jours par fonction, 2 développeurs onboardés et opérationnels
+    en 1 semaine, réduction de l'exposition aux amendes et restauration de l'image
+    client
+  - Crise de performance MWAA — refactoring complet en moins de 3 semaines avec un
+    expert externe, redémarrage de la plateforme et déploiement transverse aux pipelines
+    via formation et présentations équipes
+  - Standards entreprise (privacy, RBAC, gouvernance, data contracts) définis et adoptés
+    comme référence SFS Banque
+  - Patrimoine data critique alimentant master data, plateforme digitale, Salesforce
+    et MongoDB / API
   outcomes_en:
-  - Unified data platform for European subsidiaries (DE, GB, ES, FR)
-  - Industrialized EL and dbt frameworks
-  - Privacy strategy defined and implemented
+  - Data platform serving 8 European countries — central Data Office, per-country
+    business teams, multi-squad platform (EL, transformation, reactivity, viz)
+  - Industrialized EL framework adopted on 100+ sources per country — Bronze onboarding
+    reduced to 1.5 days (x4 time-to-market target)
+  - UK regulatory crisis (commissions) — first MVP delivered in 2 weeks, business
+    iterations under 5 days per feature, 2 engineers onboarded and productive in 1
+    week, reduced fine exposure and restored client trust
+  - MWAA performance crisis — full refactoring in under 3 weeks with an external expert,
+    platform restart and cross-pipeline rollout via training and team enablement sessions
+  - Enterprise standards (privacy, RBAC, governance, data contracts) defined and adopted
+    as the SFS Banking reference
+  - Critical data estate feeding master data, digital platform, Salesforce and MongoDB
+    / API
   display: true
 - title_fr: Plateforme Digital MongoDB + API
   title_en: Digital MongoDB + API Platform
