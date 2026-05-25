@@ -8,10 +8,10 @@ theme:
   language: fr
   palette:
     - scheme: default
-      primary: indigo
-      accent: teal
+      primary: custom
+      accent: custom
   font:
-    text: Inter
+    text: Google Sans, Inter, sans-serif
     code: JetBrains Mono
   features:
     - navigation.tabs
@@ -32,6 +32,10 @@ plugins:
           default: false
           name: English
           build: true
+
+markdown_extensions:
+  - toc:
+      toc_depth: 0
 
 extra:
   alternate:
